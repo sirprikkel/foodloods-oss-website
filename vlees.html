@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vers Vlees — Food Loods Oss</title>
+  <meta name="description" content="Vers vlees van horecakwaliteit bij Food Loods Oss. Charolais rundvlees, spiesen, burgers, grote stukken voor de BBQ. Dagelijks vers gesneden.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="images/logo.jpeg" type="image/jpeg">
+  <script>
+    tailwind.config={theme:{extend:{colors:{brand:{50:'#fef7ee',100:'#fdebd3',200:'#f9d3a5',300:'#f5b56d',400:'#f08c32',500:'#ee7210',600:'#d55a09',700:'#b1420b',800:'#8d3510',900:'#782e10'},charcoal:{50:'#f6f6f6',100:'#e7e7e7',200:'#d1d1d1',300:'#b0b0b0',400:'#888888',500:'#6d6d6d',600:'#5d5d5d',700:'#4f4f4f',800:'#3d3d3d',900:'#1a1a1a',950:'#0d0d0d'}},fontFamily:{sans:['Plus Jakarta Sans','sans-serif']}}}}
+  </script>
+  <style>html{scroll-behavior:smooth}.hero-overlay{background:linear-gradient(to bottom,rgba(13,13,13,.65),rgba(13,13,13,.4))}.nav-blur{backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}</style>
+</head>
+<body class="font-sans text-charcoal-900 bg-charcoal-50">
+  <!-- NAV -->
+  <nav class="fixed top-0 w-full z-50 bg-charcoal-950/90 nav-blur border-b border-charcoal-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+      <a href="index.html" class="flex items-center gap-3"><img src="images/logo.jpeg" alt="Logo" class="h-10 w-10 rounded-full object-cover"><span class="text-white font-bold text-lg">Food Loods <span class="text-brand-400">Oss</span></span></a>
+      <div class="hidden md:flex items-center gap-6 text-sm font-medium text-charcoal-200">
+        <a href="vlees.html" class="text-brand-400 cursor-pointer">Vlees</a>
+        <a href="wijn-bier.html" class="hover:text-brand-400 transition-colors duration-200 cursor-pointer">Wijn & Bier</a>
+        <a href="kamados.html" class="hover:text-brand-400 transition-colors duration-200 cursor-pointer">Kamado's</a>
+        <a href="workshops.html" class="hover:text-brand-400 transition-colors duration-200 cursor-pointer">Workshops</a>
+        <a href="contact.html" class="hover:text-brand-400 transition-colors duration-200 cursor-pointer">Over Ons</a>
+        <a href="klant-worden.html" class="bg-brand-500 hover:bg-brand-600 text-white px-4 py-2 rounded-lg transition-colors duration-200 cursor-pointer">Klant worden</a>
+      </div>
+      <button id="menuBtn" class="md:hidden text-white cursor-pointer"><svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+    </div>
+    <div id="mobileMenu" class="hidden md:hidden bg-charcoal-950/95 border-t border-charcoal-800 px-4 pb-4">
+      <a href="vlees.html" class="block py-3 text-brand-400 border-b border-charcoal-800">Vlees</a>
+      <a href="wijn-bier.html" class="block py-3 text-charcoal-200 border-b border-charcoal-800">Wijn & Bier</a>
+      <a href="kamados.html" class="block py-3 text-charcoal-200 border-b border-charcoal-800">Kamado's</a>
+      <a href="workshops.html" class="block py-3 text-charcoal-200 border-b border-charcoal-800">Workshops</a>
+      <a href="contact.html" class="block py-3 text-charcoal-200 border-b border-charcoal-800">Over Ons</a>
+      <a href="klant-worden.html" class="block mt-3 text-center bg-brand-500 text-white py-3 rounded-lg">Klant worden</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="relative pt-16 h-[50vh] min-h-[350px] flex items-center">
+    <img src="images/vlees.jpg" alt="Vers vlees" class="absolute inset-0 w-full h-full object-cover">
+    <div class="hero-overlay absolute inset-0"></div>
+    <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
+      <h1 class="text-4xl sm:text-5xl font-extrabold text-white mb-4">Vers Vlees</h1>
+      <p class="text-xl text-charcoal-200">Horecakwaliteit, dagelijks vers gesneden door onze vakslagers</p>
+    </div>
+  </section>
+
+  <!-- CONTENT -->
+  <section class="py-20 bg-charcoal-50">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-12">
+        <div>
+          <h2 class="text-2xl font-bold mb-4">Vers van de Vakslager</h2>
+          <p class="text-charcoal-600 leading-relaxed mb-4">Vers vlees van horecakwaliteit, speciaal gesneden op maat door onze vakslagers. Zij werken vanuit een moderne productielocatie volgens de laatste eisen op het gebied van milieu en hygiëne.</p>
+          <p class="text-charcoal-600 leading-relaxed">Wij maken zelf onze spiesen, kruiden onze hamburgers en portioneren onze biefstukken. Deze producten worden dagelijks aan de horeca geleverd — en zijn nu ook beschikbaar voor u.</p>
+        </div>
+        <div>
+          <h2 class="text-2xl font-bold mb-4">Eigen Geselecteerd Rundvee</h2>
+          <p class="text-charcoal-600 leading-relaxed mb-4">Food Loods Oss beschikt over eigen geselecteerd rundvee van het ras Charolais en Blond d'Aquitaine. Al bij de boer worden de runderen geselecteerd op vleeskwaliteit.</p>
+          <p class="text-charcoal-600 leading-relaxed">Na de slacht wordt het vlees 14 dagen lang op het heupbeen opgehangen voor maximale malsheid en smaak.</p>
+        </div>
+      </div>
+
+      <div class="mt-16 grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-white rounded-xl p-6 shadow-sm">
+          <svg class="w-8 h-8 text-brand-500 mb-3" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z"/></svg>
+          <h3 class="font-bold text-lg">Horecakwaliteit</h3>
+          <p class="text-charcoal-500 text-sm mt-1">Dezelfde kwaliteit als toprestaurants</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-sm">
+          <svg class="w-8 h-8 text-brand-500 mb-3" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.362 5.214A8.252 8.252 0 0 1 12 21 8.25 8.25 0 0 1 6.038 7.047 8.287 8.287 0 0 0 9 9.601a8.983 8.983 0 0 1 3.361-6.867 8.21 8.21 0 0 0 3 2.48Z"/></svg>
+          <h3 class="font-bold text-lg">BBQ Specialist</h3>
+          <p class="text-charcoal-500 text-sm mt-1">Grote stukken vlees voor de kamado</p>
+        </div>
+        <div class="bg-white rounded-xl p-6 shadow-sm">
+          <svg class="w-8 h-8 text-brand-500 mb-3" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>
+          <h3 class="font-bold text-lg">Dagelijks Vers</h3>
+          <p class="text-charcoal-500 text-sm mt-1">Op maat gesneden, elke dag geleverd</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="bg-brand-500 py-14">
+    <div class="max-w-3xl mx-auto px-4 text-center">
+      <h2 class="text-2xl font-bold text-white mb-4">Speciale wensen? Wij staan voor u klaar!</h2>
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="tel:0655566052" class="bg-white text-brand-600 font-bold px-6 py-3 rounded-lg cursor-pointer">06 555 660 52</a>
+        <a href="klant-worden.html" class="border-2 border-white text-white font-bold px-6 py-3 rounded-lg cursor-pointer">Klant worden</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-charcoal-950 text-charcoal-300 py-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between items-center text-sm gap-4">
+      <p>&copy; 2026 Food Loods Oss</p>
+      <p>Gebouwd door <a href="https://www.code-lieshout.nl" class="text-brand-400 hover:text-brand-300 cursor-pointer" target="_blank">Code Lieshout</a></p>
+    </div>
+  </footer>
+  <script>document.getElementById('menuBtn').addEventListener('click',()=>{document.getElementById('mobileMenu').classList.toggle('hidden')})</script>
+</body>
+</html>

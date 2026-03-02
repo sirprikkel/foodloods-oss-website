@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wijn, Bier & Gedistilleerd — Food Loods Oss</title>
+  <meta name="description" content="Exclusieve wijnen uit Italië, Frankrijk en Californië. Speciaalbieren en gedistilleerd bij Food Loods Oss. Proeverijen en advies.">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="icon" href="images/logo.jpeg">
+  <script>tailwind.config={theme:{extend:{colors:{brand:{50:'#fef7ee',100:'#fdebd3',200:'#f9d3a5',300:'#f5b56d',400:'#f08c32',500:'#ee7210',600:'#d55a09',700:'#b1420b',800:'#8d3510',900:'#782e10'},charcoal:{50:'#f6f6f6',100:'#e7e7e7',200:'#d1d1d1',300:'#b0b0b0',400:'#888888',500:'#6d6d6d',600:'#5d5d5d',700:'#4f4f4f',800:'#3d3d3d',900:'#1a1a1a',950:'#0d0d0d'}},fontFamily:{sans:['Plus Jakarta Sans','sans-serif']}}}}</script>
+  <style>html{scroll-behavior:smooth}.hero-overlay{background:linear-gradient(to bottom,rgba(13,13,13,.65),rgba(13,13,13,.4))}.nav-blur{backdrop-filter:blur(12px)}</style>
+</head>
+<body class="font-sans text-charcoal-900 bg-charcoal-50">
+  <nav class="fixed top-0 w-full z-50 bg-charcoal-950/90 nav-blur border-b border-charcoal-800">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+      <a href="index.html" class="flex items-center gap-3"><img src="images/logo.jpeg" alt="Logo" class="h-10 w-10 rounded-full object-cover"><span class="text-white font-bold text-lg">Food Loods <span class="text-brand-400">Oss</span></span></a>
+      <div class="hidden md:flex items-center gap-6 text-sm font-medium text-charcoal-200">
+        <a href="vlees.html" class="hover:text-brand-400 transition-colors duration-200 cursor-pointer">Vlees</a>
+        <a href="wijn-bier.html" class="text-brand-400 cursor-pointer">Wijn & Bier</a>
+        <a href="kamados.html" class="hover:text-brand-400 transition-colors duration-200 cursor-pointer">Kamado's</a>
+        <a href="workshops.html" class="hover:text-brand-400 transition-colors duration-200 cursor-pointer">Workshops</a>
+        <a href="contact.html" class="hover:text-brand-400 transition-colors duration-200 cursor-pointer">Over Ons</a>
+        <a href="klant-worden.html" class="bg-brand-500 hover:bg-brand-600 text-white px-4 py-2 rounded-lg transition-colors duration-200 cursor-pointer">Klant worden</a>
+      </div>
+      <button id="menuBtn" class="md:hidden text-white cursor-pointer"><svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
+    </div>
+    <div id="mobileMenu" class="hidden md:hidden bg-charcoal-950/95 border-t border-charcoal-800 px-4 pb-4">
+      <a href="vlees.html" class="block py-3 text-charcoal-200 border-b border-charcoal-800">Vlees</a>
+      <a href="wijn-bier.html" class="block py-3 text-brand-400 border-b border-charcoal-800">Wijn & Bier</a>
+      <a href="kamados.html" class="block py-3 text-charcoal-200 border-b border-charcoal-800">Kamado's</a>
+      <a href="workshops.html" class="block py-3 text-charcoal-200 border-b border-charcoal-800">Workshops</a>
+      <a href="contact.html" class="block py-3 text-charcoal-200 border-b border-charcoal-800">Over Ons</a>
+      <a href="klant-worden.html" class="block mt-3 text-center bg-brand-500 text-white py-3 rounded-lg">Klant worden</a>
+    </div>
+  </nav>
+
+  <section class="relative pt-16 h-[50vh] min-h-[350px] flex items-center">
+    <img src="images/cocktails.jpg" alt="Wijn en bier" class="absolute inset-0 w-full h-full object-cover">
+    <div class="hero-overlay absolute inset-0"></div>
+    <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
+      <h1 class="text-4xl sm:text-5xl font-extrabold text-white mb-4">Wijn, Bier & Gedistilleerd</h1>
+      <p class="text-xl text-charcoal-200">Exclusief, karaktervol en nergens in de supermarkt te vinden</p>
+    </div>
+  </section>
+
+  <section class="py-20 bg-charcoal-50">
+    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="grid md:grid-cols-2 gap-12 mb-16">
+        <div>
+          <h2 class="text-2xl font-bold mb-4">Dé Specialist in Wijn & Bier</h2>
+          <p class="text-charcoal-600 leading-relaxed mb-4">Bij Food Loods Oss vind je een uitgebreid assortiment aan wijn, gedistilleerd en speciaalbier. Maar we bieden meer dan alleen drank — we creëren belevenissen.</p>
+          <p class="text-charcoal-600 leading-relaxed">Wij selecteren onze wijnen met veel zorg en passie. Exclusieve wijnen uit Italië, Frankrijk en Californië, met snelle levertijden door korte lijnen met producenten.</p>
+        </div>
+        <div>
+          <h2 class="text-2xl font-bold mb-4">Het Karakter van Onze Wijnen</h2>
+          <ul class="space-y-3 text-charcoal-600">
+            <li class="flex items-start gap-3"><svg class="w-5 h-5 text-brand-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z"/></svg>Stoer en karaktervol</li>
+            <li class="flex items-start gap-3"><svg class="w-5 h-5 text-brand-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z"/></svg>Fris tot vol, van hoge kwaliteit</li>
+            <li class="flex items-start gap-3"><svg class="w-5 h-5 text-brand-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z"/></svg>Traditioneel met een moderne twist</li>
+            <li class="flex items-start gap-3"><svg class="w-5 h-5 text-brand-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z"/></svg>Wisselend en verrassend assortiment</li>
+            <li class="flex items-start gap-3"><svg class="w-5 h-5 text-brand-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z"/></svg>Perfect als uniek cadeau</li>
+          </ul>
+        </div>
+      </div>
+
+      <h2 class="text-2xl font-bold mb-6">Activiteiten & Beleving</h2>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="bg-white rounded-xl p-6 shadow-sm"><h3 class="font-bold mb-2">Wijn-spijsavonden</h3><p class="text-charcoal-500 text-sm">Laat je verrassen door perfecte smaakcombinaties</p></div>
+        <div class="bg-white rounded-xl p-6 shadow-sm"><h3 class="font-bold mb-2">Workshops</h3><p class="text-charcoal-500 text-sm">Leer de kunst van het proeven en combineren</p></div>
+        <div class="bg-white rounded-xl p-6 shadow-sm"><h3 class="font-bold mb-2">Recepties & Events</h3><p class="text-charcoal-500 text-sm">Voor een onvergetelijke ervaring</p></div>
+        <div class="bg-white rounded-xl p-6 shadow-sm"><h3 class="font-bold mb-2">Persoonlijk Advies</h3><p class="text-charcoal-500 text-sm">Begeleiding bij jouw perfecte wijnkeuze</p></div>
+        <div class="bg-white rounded-xl p-6 shadow-sm"><h3 class="font-bold mb-2">Projecten & Maatwerk</h3><p class="text-charcoal-500 text-sm">Altijd met wijn als stralend middelpunt</p></div>
+        <div class="bg-white rounded-xl p-6 shadow-sm"><h3 class="font-bold mb-2">Familiebedrijf</h3><p class="text-charcoal-500 text-sm">Korte lijnen met producenten, persoonlijke aandacht</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="bg-brand-500 py-14">
+    <div class="max-w-3xl mx-auto px-4 text-center">
+      <h2 class="text-2xl font-bold text-white mb-4">Op zoek naar de perfecte fles?</h2>
+      <a href="tel:0655566052" class="bg-white text-brand-600 font-bold px-6 py-3 rounded-lg cursor-pointer inline-block">Bel ons: 06 555 660 52</a>
+    </div>
+  </section>
+
+  <footer class="bg-charcoal-950 text-charcoal-300 py-12">
+    <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center text-sm gap-4">
+      <p>&copy; 2026 Food Loods Oss</p>
+      <p>Gebouwd door <a href="https://www.code-lieshout.nl" class="text-brand-400 hover:text-brand-300 cursor-pointer" target="_blank">Code Lieshout</a></p>
+    </div>
+  </footer>
+  <script>document.getElementById('menuBtn').addEventListener('click',()=>{document.getElementById('mobileMenu').classList.toggle('hidden')})</script>
+</body>
+</html>
