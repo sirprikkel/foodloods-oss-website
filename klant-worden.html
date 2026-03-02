@@ -1,96 +1,77 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Klant Worden — Food Loods Oss</title>
-  <meta name="description" content="Word klant bij Food Loods Oss. Iedereen met een KvK-nummer is welkom. Vraag je klantenpas aan in de winkel of online.">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="icon" href="images/logo.jpeg">
-  <script>tailwind.config={theme:{extend:{colors:{brand:{50:'#fef7ee',100:'#fdebd3',200:'#f9d3a5',300:'#f5b56d',400:'#f08c32',500:'#ee7210',600:'#d55a09',700:'#b1420b',800:'#8d3510',900:'#782e10'},charcoal:{50:'#f6f6f6',100:'#e7e7e7',200:'#d1d1d1',300:'#b0b0b0',400:'#888888',500:'#6d6d6d',600:'#5d5d5d',700:'#4f4f4f',800:'#3d3d3d',900:'#1a1a1a',950:'#0d0d0d'}},fontFamily:{sans:['Plus Jakarta Sans','sans-serif']}}}}</script>
-  <style>html{scroll-behavior:smooth}.nav-blur{backdrop-filter:blur(12px)}</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Klant Worden — Food Loods Oss</title>
+<meta name="description" content="Word klant bij Food Loods Oss. Meld je aan als horecaklant en profiteer van groothandelsprijzen.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Cabin:wght@400;500;600;700&display=swap');
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}:root{--primary:#DC2626;--secondary:#F87171;--cta:#CA8A04;--bg:#FEF2F2;--text:#450A0A;--dark:#450A0A}html{scroll-behavior:smooth}body{font-family:'Cabin',sans-serif;color:var(--text);background:var(--bg);line-height:1.6}h1,h2,h3{font-family:'Amatic SC',cursive;font-weight:700}h1{font-size:clamp(48px,8vw,80px);line-height:1.1}h2{font-size:clamp(36px,6vw,56px);line-height:1.2}h3{font-size:clamp(28px,4vw,36px)}a{color:inherit;text-decoration:none}img{max-width:100%;height:auto;display:block}.container{max-width:1200px;margin:0 auto;padding:0 16px}@media(min-width:640px){.container{padding:0 24px}}@media(min-width:1024px){.container{padding:0 32px}}
+.btn-primary{display:inline-block;background:var(--cta);color:#fff;padding:14px 32px;border-radius:8px;font-weight:600;font-size:18px;cursor:pointer;transition:all .2s;border:none}.btn-primary:hover{opacity:.9;transform:translateY(-1px)}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(69,10,10,.92);backdrop-filter:blur(12px)}.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;max-width:1200px;margin:0 auto}@media(min-width:640px){.nav-inner{padding:12px 24px}}@media(min-width:1024px){.nav-inner{padding:12px 32px}}nav img{height:40px;width:auto}.nav-links{display:none;gap:8px;align-items:center}.nav-links a{color:#FEF2F2;padding:8px 14px;border-radius:6px;font-weight:500;transition:color .2s;cursor:pointer;font-size:15px}.nav-links a:hover,.nav-links a.active{color:var(--cta)}.nav-cta{background:var(--cta);color:#fff!important;border-radius:8px;padding:10px 20px!important;font-weight:600}@media(min-width:900px){.nav-links{display:flex}}.hamburger{display:flex;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none}.hamburger span{width:24px;height:2px;background:#FEF2F2;border-radius:2px}@media(min-width:900px){.hamburger{display:none}}.mobile-menu{display:none;position:fixed;top:64px;left:0;right:0;background:rgba(69,10,10,.97);padding:24px;flex-direction:column;gap:8px;backdrop-filter:blur(12px)}.mobile-menu.open{display:flex}.mobile-menu a{color:#FEF2F2;padding:12px 16px;font-size:18px;border-radius:8px;cursor:pointer}.mobile-menu a:hover,.mobile-menu a.active{color:var(--cta)}
+.section{padding:80px 0}
+.card{background:#fff;border-radius:12px;box-shadow:0 4px 6px -1px rgba(0,0,0,.1);padding:32px}
+.callout{background:var(--cta);color:#fff;border-radius:12px;padding:32px;margin-top:48px}.callout h3{color:#fff;margin-bottom:8px}.callout p{opacity:.9}
+.steps{display:grid;gap:32px;margin:48px 0}@media(min-width:768px){.steps{grid-template-columns:repeat(3,1fr)}}
+.step{text-align:center;padding:32px;background:#fff;border-radius:12px;box-shadow:0 4px 6px -1px rgba(0,0,0,.08)}.step-num{width:56px;height:56px;border-radius:50%;background:var(--primary);color:#fff;display:flex;align-items:center;justify-content:center;font-family:'Amatic SC',cursive;font-size:32px;font-weight:700;margin:0 auto 16px}.step h3{margin-bottom:8px}.step p{font-size:15px;opacity:.85}
+input,textarea{width:100%;padding:14px 16px;border:2px solid #e5e5e5;border-radius:8px;font-family:'Cabin',sans-serif;font-size:16px;background:#fff;color:var(--text);transition:all .2s}input:focus,textarea:focus{outline:none;border-color:var(--primary);box-shadow:0 0 0 3px rgba(220,38,38,.12)}textarea{resize:vertical;min-height:100px}label{display:block;font-weight:600;margin-bottom:6px;font-size:15px}.form-group{margin-bottom:20px}
+footer{background:var(--dark);color:#FEF2F2;padding:64px 0 24px}.footer-grid{display:grid;gap:32px;margin-bottom:48px}@media(min-width:768px){.footer-grid{grid-template-columns:repeat(4,1fr)}}footer h3{color:var(--cta);font-size:28px;margin-bottom:16px}footer a{color:#FEF2F2;opacity:.8;display:block;padding:4px 0;cursor:pointer;transition:opacity .2s}footer a:hover{opacity:1}footer p{opacity:.8;font-size:14px;line-height:1.8}.footer-bottom{border-top:1px solid rgba(254,242,242,.15);padding-top:24px;text-align:center;font-size:13px;opacity:.6}
+</style>
 </head>
-<body class="font-sans text-charcoal-900 bg-charcoal-50">
-  <nav class="fixed top-0 w-full z-50 bg-charcoal-950/90 nav-blur border-b border-charcoal-800">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
-      <a href="index.html" class="flex items-center gap-3"><img src="images/logo.jpeg" alt="Logo" class="h-10 w-10 rounded-full object-cover"><span class="text-white font-bold text-lg">Food Loods <span class="text-brand-400">Oss</span></span></a>
-      <div class="hidden md:flex items-center gap-6 text-sm font-medium text-charcoal-200">
-        <a href="vlees.html" class="hover:text-brand-400 transition-colors duration-200 cursor-pointer">Vlees</a>
-        <a href="wijn-bier.html" class="hover:text-brand-400 transition-colors duration-200 cursor-pointer">Wijn & Bier</a>
-        <a href="kamados.html" class="hover:text-brand-400 transition-colors duration-200 cursor-pointer">Kamado's</a>
-        <a href="workshops.html" class="hover:text-brand-400 transition-colors duration-200 cursor-pointer">Workshops</a>
-        <a href="contact.html" class="hover:text-brand-400 transition-colors duration-200 cursor-pointer">Over Ons</a>
-        <a href="klant-worden.html" class="bg-brand-500 text-white px-4 py-2 rounded-lg cursor-pointer">Klant worden</a>
-      </div>
-      <button id="menuBtn" class="md:hidden text-white cursor-pointer"><svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
-    </div>
-    <div id="mobileMenu" class="hidden md:hidden bg-charcoal-950/95 border-t border-charcoal-800 px-4 pb-4">
-      <a href="vlees.html" class="block py-3 text-charcoal-200 border-b border-charcoal-800">Vlees</a>
-      <a href="wijn-bier.html" class="block py-3 text-charcoal-200 border-b border-charcoal-800">Wijn & Bier</a>
-      <a href="kamados.html" class="block py-3 text-charcoal-200 border-b border-charcoal-800">Kamado's</a>
-      <a href="workshops.html" class="block py-3 text-charcoal-200 border-b border-charcoal-800">Workshops</a>
-      <a href="contact.html" class="block py-3 text-charcoal-200 border-b border-charcoal-800">Over Ons</a>
-      <a href="klant-worden.html" class="block mt-3 text-center bg-brand-500 text-white py-3 rounded-lg">Klant worden</a>
-    </div>
-  </nav>
+<body>
+<nav><div class="nav-inner"><a href="index.html"><img src="images/logo-small.jpeg" alt="Food Loods Oss"></a><div class="nav-links"><a href="index.html">Home</a><a href="vlees.html">Vlees</a><a href="wijn-bier.html">Wijn & Bier</a><a href="kamados.html">Kamado's</a><a href="workshops.html">Workshops</a><a href="contact.html">Contact</a><a href="klant-worden.html" class="nav-cta active">Klant worden</a></div><button class="hamburger" onclick="document.querySelector('.mobile-menu').classList.toggle('open')" aria-label="Menu"><span></span><span></span><span></span></button></div><div class="mobile-menu"><a href="index.html">Home</a><a href="vlees.html">Vlees</a><a href="wijn-bier.html">Wijn & Bier</a><a href="kamados.html">Kamado's</a><a href="workshops.html">Workshops</a><a href="contact.html">Contact</a><a href="klant-worden.html" class="nav-cta active" style="text-align:center;margin-top:8px">Klant worden</a></div></nav>
 
-  <div class="pt-24 pb-20">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-12">
-        <h1 class="text-4xl font-extrabold mb-4">Klant Worden</h1>
-        <p class="text-charcoal-500 text-lg max-w-xl mx-auto">Iedereen met een KvK-nummer is welkom bij Food Loods Oss. Vraag je klantenpas aan en profiteer van horecakwaliteit producten.</p>
-      </div>
+<section class="section" style="padding-top:120px">
+<div class="container">
+<h1 style="text-align:center;margin-bottom:16px">Klant Worden</h1>
+<p style="text-align:center;font-size:18px;max-width:650px;margin:0 auto 16px;opacity:.8">Word horecaklant bij Food Loods Oss en profiteer van groothandelsprijzen, persoonlijk advies en een breed assortiment van topkwaliteit.</p>
 
-      <!-- STAPPEN -->
-      <div class="grid md:grid-cols-3 gap-6 mb-16">
-        <div class="bg-white rounded-2xl p-8 shadow-sm text-center">
-          <div class="w-12 h-12 bg-brand-100 text-brand-600 rounded-full flex items-center justify-center font-extrabold text-xl mx-auto mb-4">1</div>
-          <h3 class="font-bold text-lg mb-2">KvK-nummer</h3>
-          <p class="text-charcoal-500 text-sm">Je hebt een inschrijving bij de Kamer van Koophandel nodig. Horecaklant, kapper, aannemer — iedereen is welkom.</p>
-        </div>
-        <div class="bg-white rounded-2xl p-8 shadow-sm text-center">
-          <div class="w-12 h-12 bg-brand-100 text-brand-600 rounded-full flex items-center justify-center font-extrabold text-xl mx-auto mb-4">2</div>
-          <h3 class="font-bold text-lg mb-2">Aanmelden</h3>
-          <p class="text-charcoal-500 text-sm">Meld je aan in de winkel of vul het formulier hieronder in. Een medewerker helpt je verder.</p>
-        </div>
-        <div class="bg-white rounded-2xl p-8 shadow-sm text-center">
-          <div class="w-12 h-12 bg-brand-100 text-brand-600 rounded-full flex items-center justify-center font-extrabold text-xl mx-auto mb-4">3</div>
-          <h3 class="font-bold text-lg mb-2">Klantenpas</h3>
-          <p class="text-charcoal-500 text-sm">Je klantenpas wordt ter plekke afgedrukt. Direct toegang tot ons volledige assortiment.</p>
-        </div>
-      </div>
+<div class="steps">
+<div class="step">
+<div class="step-num">1</div>
+<h3>KvK-nummer Klaarleggen</h3>
+<p>Zorg dat je je KvK-inschrijfnummer bij de hand hebt. Dit hebben wij nodig voor de registratie.</p>
+</div>
+<div class="step">
+<div class="step-num">2</div>
+<h3>Aanmelden</h3>
+<p>Vul het aanmeldformulier hieronder in, of kom langs in onze vestiging in Oss of Gemert.</p>
+</div>
+<div class="step">
+<div class="step-num">3</div>
+<h3>Klantenpas Ontvangen</h3>
+<p>Na goedkeuring ontvang je je persoonlijke klantenpas en kun je direct bestellen.</p>
+</div>
+</div>
 
-      <!-- FORMULIER -->
-      <div class="bg-white rounded-2xl shadow-md p-8 max-w-xl mx-auto">
-        <h2 class="text-2xl font-bold mb-6 text-center">Online Aanmelden</h2>
-        <form action="mailto:info@euromeatoss.nl" method="post" enctype="text/plain" class="space-y-4">
-          <div class="grid sm:grid-cols-2 gap-4">
-            <div><label class="block text-sm font-medium mb-1">Naam</label><input type="text" name="naam" required class="w-full border border-charcoal-200 rounded-lg px-4 py-3 text-sm focus:ring-2 focus:ring-brand-400 outline-none transition"></div>
-            <div><label class="block text-sm font-medium mb-1">Bedrijfsnaam</label><input type="text" name="bedrijfsnaam" required class="w-full border border-charcoal-200 rounded-lg px-4 py-3 text-sm focus:ring-2 focus:ring-brand-400 outline-none transition"></div>
-          </div>
-          <div><label class="block text-sm font-medium mb-1">KvK-nummer</label><input type="text" name="kvk" required class="w-full border border-charcoal-200 rounded-lg px-4 py-3 text-sm focus:ring-2 focus:ring-brand-400 outline-none transition"></div>
-          <div class="grid sm:grid-cols-2 gap-4">
-            <div><label class="block text-sm font-medium mb-1">Email</label><input type="email" name="email" required class="w-full border border-charcoal-200 rounded-lg px-4 py-3 text-sm focus:ring-2 focus:ring-brand-400 outline-none transition"></div>
-            <div><label class="block text-sm font-medium mb-1">Telefoon</label><input type="tel" name="telefoon" required class="w-full border border-charcoal-200 rounded-lg px-4 py-3 text-sm focus:ring-2 focus:ring-brand-400 outline-none transition"></div>
-          </div>
-          <div><label class="block text-sm font-medium mb-1">Opmerkingen</label><textarea name="opmerkingen" rows="3" class="w-full border border-charcoal-200 rounded-lg px-4 py-3 text-sm focus:ring-2 focus:ring-brand-400 outline-none transition resize-none"></textarea></div>
-          <button type="submit" class="w-full bg-brand-500 hover:bg-brand-600 text-white font-bold py-3 rounded-lg transition-colors duration-200 cursor-pointer">Klantenpas aanvragen</button>
-        </form>
-      </div>
+<div style="max-width:700px;margin:48px auto 0">
+<h2 style="text-align:center;margin-bottom:32px">Aanmeldformulier</h2>
+<form action="#" method="post" class="card">
+<div style="display:grid;gap:20px;grid-template-columns:1fr 1fr">
+<div class="form-group" style="margin:0"><label for="naam">Naam *</label><input type="text" id="naam" name="naam" required></div>
+<div class="form-group" style="margin:0"><label for="bedrijf">Bedrijfsnaam *</label><input type="text" id="bedrijf" name="bedrijf" required></div>
+</div>
+<div class="form-group" style="margin-top:20px"><label for="kvk">KvK-nummer *</label><input type="text" id="kvk" name="kvk" required></div>
+<div style="display:grid;gap:20px;grid-template-columns:1fr 1fr">
+<div class="form-group" style="margin:0"><label for="email">Email *</label><input type="email" id="email" name="email" required></div>
+<div class="form-group" style="margin:0"><label for="tel">Telefoon</label><input type="tel" id="tel" name="tel"></div>
+</div>
+<div class="form-group" style="margin-top:20px">
+<label for="opmerkingen">Opmerkingen</label>
+<textarea id="opmerkingen" name="opmerkingen" placeholder="Bijv. type horecabedrijf, specifieke wensen..."></textarea>
+</div>
+<button type="submit" class="btn-primary" style="width:100%">Aanmelding versturen</button>
+</form>
+</div>
 
-      <div class="mt-12 bg-brand-50 border border-brand-200 rounded-xl p-6 text-center max-w-xl mx-auto">
-        <p class="text-charcoal-700 font-medium">Particulier? Bezoek onze vestiging in <strong>Gemert</strong> — daar is geen klantenpas nodig!</p>
-        <p class="text-charcoal-500 text-sm mt-1">Molenstraat 45, 5421 KD Gemert</p>
-      </div>
-    </div>
-  </div>
+<div class="callout" style="max-width:700px;margin:48px auto 0;text-align:center">
+<h3>Ook Particulier Welkom in Gemert!</h3>
+<p>Onze vestiging aan de Molenstraat 45 in Gemert is ook geopend voor particulieren. Geen KvK nodig — iedereen is welkom.</p>
+</div>
+</div>
+</section>
 
-  <footer class="bg-charcoal-950 text-charcoal-300 py-12">
-    <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center text-sm gap-4">
-      <p>&copy; 2026 Food Loods Oss</p>
-      <p>Gebouwd door <a href="https://www.code-lieshout.nl" class="text-brand-400 hover:text-brand-300 cursor-pointer" target="_blank">Code Lieshout</a></p>
-    </div>
-  </footer>
-  <script>document.getElementById('menuBtn').addEventListener('click',()=>{document.getElementById('mobileMenu').classList.toggle('hidden')})</script>
+<footer><div class="container"><div class="footer-grid"><div><img src="images/logo-small.jpeg" alt="Food Loods Oss" style="height:48px;margin-bottom:16px;border-radius:6px"><p>Horecagroothandel, slijterij en BBQ specialist in Oss en Gemert.</p></div><div><h3>Assortiment</h3><a href="vlees.html">Vlees & Vleeswaren</a><a href="wijn-bier.html">Wijn & Bier</a><a href="kamados.html">Kamado's & BBQ</a><a href="workshops.html">Workshops</a></div><div><h3>Contact</h3><p>Angelenweg 77, 5349 TA Oss</p><p>Molenstraat 45, 5421 KD Gemert</p><p style="margin-top:8px"><a href="tel:0655566052">06 555 660 52</a></p><p><a href="tel:0412640637">0412 640 637</a></p><p><a href="mailto:info@euromeatoss.nl">info@euromeatoss.nl</a></p></div><div><h3>Openingstijden</h3><p>Ma - Vr: 09:00 - 18:00</p><p>Za: 09:00 - 17:00</p><p>Zo: Gesloten</p><p style="margin-top:12px"><a href="https://facebook.com/foodloodsoss" target="_blank" rel="noopener">Facebook</a></p></div></div><div class="footer-bottom"><p>&copy; 2025 Food Loods Oss — Gebouwd door <a href="https://code-lieshout.nl" target="_blank" rel="noopener" style="opacity:1;display:inline">Code Lieshout</a></p></div></div></footer>
 </body>
 </html>

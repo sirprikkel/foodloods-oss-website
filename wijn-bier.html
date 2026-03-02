@@ -1,93 +1,101 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Wijn, Bier & Gedistilleerd — Food Loods Oss</title>
-  <meta name="description" content="Exclusieve wijnen uit Italië, Frankrijk en Californië. Speciaalbieren en gedistilleerd bij Food Loods Oss. Proeverijen en advies.">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="icon" href="images/logo.jpeg">
-  <script>tailwind.config={theme:{extend:{colors:{brand:{50:'#fef7ee',100:'#fdebd3',200:'#f9d3a5',300:'#f5b56d',400:'#f08c32',500:'#ee7210',600:'#d55a09',700:'#b1420b',800:'#8d3510',900:'#782e10'},charcoal:{50:'#f6f6f6',100:'#e7e7e7',200:'#d1d1d1',300:'#b0b0b0',400:'#888888',500:'#6d6d6d',600:'#5d5d5d',700:'#4f4f4f',800:'#3d3d3d',900:'#1a1a1a',950:'#0d0d0d'}},fontFamily:{sans:['Plus Jakarta Sans','sans-serif']}}}}</script>
-  <style>html{scroll-behavior:smooth}.hero-overlay{background:linear-gradient(to bottom,rgba(13,13,13,.65),rgba(13,13,13,.4))}.nav-blur{backdrop-filter:blur(12px)}</style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Wijn & Bier — Food Loods Oss</title>
+<meta name="description" content="Wijn- en bierspecialist Food Loods Oss. Proeverijen, wijnadvies en een uitgebreid assortiment speciaalbieren.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Cabin:wght@400;500;600;700&display=swap');
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}:root{--primary:#DC2626;--secondary:#F87171;--cta:#CA8A04;--bg:#FEF2F2;--text:#450A0A;--dark:#450A0A}html{scroll-behavior:smooth}body{font-family:'Cabin',sans-serif;color:var(--text);background:var(--bg);line-height:1.6}h1,h2,h3{font-family:'Amatic SC',cursive;font-weight:700}h1{font-size:clamp(48px,8vw,80px);line-height:1.1}h2{font-size:clamp(36px,6vw,56px);line-height:1.2}h3{font-size:clamp(28px,4vw,36px)}a{color:inherit;text-decoration:none}img{max-width:100%;height:auto;display:block}.container{max-width:1200px;margin:0 auto;padding:0 16px}@media(min-width:640px){.container{padding:0 24px}}@media(min-width:1024px){.container{padding:0 32px}}
+.btn-primary{display:inline-block;background:var(--cta);color:#fff;padding:14px 32px;border-radius:8px;font-weight:600;font-size:18px;cursor:pointer;transition:all .2s;border:none}.btn-primary:hover{opacity:.9;transform:translateY(-1px)}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(69,10,10,.92);backdrop-filter:blur(12px)}.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;max-width:1200px;margin:0 auto}@media(min-width:640px){.nav-inner{padding:12px 24px}}@media(min-width:1024px){.nav-inner{padding:12px 32px}}nav img{height:40px;width:auto}.nav-links{display:none;gap:8px;align-items:center}.nav-links a{color:#FEF2F2;padding:8px 14px;border-radius:6px;font-weight:500;transition:color .2s;cursor:pointer;font-size:15px}.nav-links a:hover,.nav-links a.active{color:var(--cta)}.nav-cta{background:var(--cta);color:#fff!important;border-radius:8px;padding:10px 20px!important;font-weight:600}.nav-cta:hover{opacity:.9}@media(min-width:900px){.nav-links{display:flex}}.hamburger{display:flex;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none}.hamburger span{width:24px;height:2px;background:#FEF2F2;border-radius:2px}@media(min-width:900px){.hamburger{display:none}}.mobile-menu{display:none;position:fixed;top:64px;left:0;right:0;background:rgba(69,10,10,.97);padding:24px;flex-direction:column;gap:8px;backdrop-filter:blur(12px)}.mobile-menu.open{display:flex}.mobile-menu a{color:#FEF2F2;padding:12px 16px;font-size:18px;border-radius:8px;cursor:pointer}.mobile-menu a:hover,.mobile-menu a.active{color:var(--cta)}
+.hero{position:relative;min-height:60vh;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden}.hero-bg{position:absolute;inset:0;background-size:cover;background-position:center}.hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(69,10,10,.55),rgba(69,10,10,.75))}.hero-content{position:relative;z-index:1;color:#FEF2F2;padding:120px 16px 80px}.hero-content p{font-size:clamp(18px,2.5vw,22px);margin:16px 0 0;max-width:600px;margin-left:auto;margin-right:auto;opacity:.9}
+.section{padding:80px 0}.grid-2{display:grid;gap:48px;align-items:center}@media(min-width:768px){.grid-2{grid-template-columns:1fr 1fr}}.grid-3{display:grid;gap:24px}@media(min-width:640px){.grid-3{grid-template-columns:repeat(2,1fr)}}@media(min-width:1024px){.grid-3{grid-template-columns:repeat(3,1fr)}}
+.card{background:var(--bg);border-radius:12px;box-shadow:0 4px 6px -1px rgba(0,0,0,.1);padding:32px;transition:all .3s}.card:hover{box-shadow:0 10px 25px -5px rgba(0,0,0,.15);transform:translateY(-2px)}.card-icon{width:48px;height:48px;margin-bottom:16px;color:var(--primary)}.card h3{margin-bottom:8px}.card p{font-size:15px;opacity:.85}
+.check-list{list-style:none;padding:0;margin:24px 0}.check-list li{padding:8px 0 8px 32px;position:relative;font-size:17px}.check-list li::before{content:'';position:absolute;left:0;top:12px;width:20px;height:20px;background:var(--cta);border-radius:50%;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'%3E%3Cpath d='M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z'/%3E%3C/svg%3E") center/16px no-repeat;-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='currentColor'%3E%3Cpath d='M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z'/%3E%3C/svg%3E") center/16px no-repeat}
+.cta-bar{background:var(--cta);color:#fff;padding:64px 0;text-align:center}.cta-bar h2{color:#fff;margin-bottom:16px}.cta-bar p{font-size:18px;opacity:.9;margin-bottom:24px}
+footer{background:var(--dark);color:#FEF2F2;padding:64px 0 24px}.footer-grid{display:grid;gap:32px;margin-bottom:48px}@media(min-width:768px){.footer-grid{grid-template-columns:repeat(4,1fr)}}footer h3{color:var(--cta);font-size:28px;margin-bottom:16px}footer a{color:#FEF2F2;opacity:.8;display:block;padding:4px 0;cursor:pointer;transition:opacity .2s}footer a:hover{opacity:1}footer p{opacity:.8;font-size:14px;line-height:1.8}.footer-bottom{border-top:1px solid rgba(254,242,242,.15);padding-top:24px;text-align:center;font-size:13px;opacity:.6}
+</style>
 </head>
-<body class="font-sans text-charcoal-900 bg-charcoal-50">
-  <nav class="fixed top-0 w-full z-50 bg-charcoal-950/90 nav-blur border-b border-charcoal-800">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
-      <a href="index.html" class="flex items-center gap-3"><img src="images/logo.jpeg" alt="Logo" class="h-10 w-10 rounded-full object-cover"><span class="text-white font-bold text-lg">Food Loods <span class="text-brand-400">Oss</span></span></a>
-      <div class="hidden md:flex items-center gap-6 text-sm font-medium text-charcoal-200">
-        <a href="vlees.html" class="hover:text-brand-400 transition-colors duration-200 cursor-pointer">Vlees</a>
-        <a href="wijn-bier.html" class="text-brand-400 cursor-pointer">Wijn & Bier</a>
-        <a href="kamados.html" class="hover:text-brand-400 transition-colors duration-200 cursor-pointer">Kamado's</a>
-        <a href="workshops.html" class="hover:text-brand-400 transition-colors duration-200 cursor-pointer">Workshops</a>
-        <a href="contact.html" class="hover:text-brand-400 transition-colors duration-200 cursor-pointer">Over Ons</a>
-        <a href="klant-worden.html" class="bg-brand-500 hover:bg-brand-600 text-white px-4 py-2 rounded-lg transition-colors duration-200 cursor-pointer">Klant worden</a>
-      </div>
-      <button id="menuBtn" class="md:hidden text-white cursor-pointer"><svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg></button>
-    </div>
-    <div id="mobileMenu" class="hidden md:hidden bg-charcoal-950/95 border-t border-charcoal-800 px-4 pb-4">
-      <a href="vlees.html" class="block py-3 text-charcoal-200 border-b border-charcoal-800">Vlees</a>
-      <a href="wijn-bier.html" class="block py-3 text-brand-400 border-b border-charcoal-800">Wijn & Bier</a>
-      <a href="kamados.html" class="block py-3 text-charcoal-200 border-b border-charcoal-800">Kamado's</a>
-      <a href="workshops.html" class="block py-3 text-charcoal-200 border-b border-charcoal-800">Workshops</a>
-      <a href="contact.html" class="block py-3 text-charcoal-200 border-b border-charcoal-800">Over Ons</a>
-      <a href="klant-worden.html" class="block mt-3 text-center bg-brand-500 text-white py-3 rounded-lg">Klant worden</a>
-    </div>
-  </nav>
+<body>
+<nav><div class="nav-inner"><a href="index.html"><img src="images/logo-small.jpeg" alt="Food Loods Oss"></a><div class="nav-links"><a href="index.html">Home</a><a href="vlees.html">Vlees</a><a href="wijn-bier.html" class="active">Wijn & Bier</a><a href="kamados.html">Kamado's</a><a href="workshops.html">Workshops</a><a href="contact.html">Contact</a><a href="klant-worden.html" class="nav-cta">Klant worden</a></div><button class="hamburger" onclick="document.querySelector('.mobile-menu').classList.toggle('open')" aria-label="Menu"><span></span><span></span><span></span></button></div><div class="mobile-menu"><a href="index.html">Home</a><a href="vlees.html">Vlees</a><a href="wijn-bier.html" class="active">Wijn & Bier</a><a href="kamados.html">Kamado's</a><a href="workshops.html">Workshops</a><a href="contact.html">Contact</a><a href="klant-worden.html" class="nav-cta" style="text-align:center;margin-top:8px">Klant worden</a></div></nav>
 
-  <section class="relative pt-16 h-[50vh] min-h-[350px] flex items-center">
-    <img src="images/cocktails.jpg" alt="Wijn en bier" class="absolute inset-0 w-full h-full object-cover">
-    <div class="hero-overlay absolute inset-0"></div>
-    <div class="relative z-10 max-w-4xl mx-auto px-4 text-center">
-      <h1 class="text-4xl sm:text-5xl font-extrabold text-white mb-4">Wijn, Bier & Gedistilleerd</h1>
-      <p class="text-xl text-charcoal-200">Exclusief, karaktervol en nergens in de supermarkt te vinden</p>
-    </div>
-  </section>
+<section class="hero">
+<div class="hero-bg" style="background-image:url('images/cocktails.jpg')"></div>
+<div class="hero-content">
+<h1>Wijn & Bier</h1>
+<p>Van verfijnde wijnen tot ambachtelijke speciaalbieren — ontdek ons uitgebreide assortiment.</p>
+</div>
+</section>
 
-  <section class="py-20 bg-charcoal-50">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid md:grid-cols-2 gap-12 mb-16">
-        <div>
-          <h2 class="text-2xl font-bold mb-4">Dé Specialist in Wijn & Bier</h2>
-          <p class="text-charcoal-600 leading-relaxed mb-4">Bij Food Loods Oss vind je een uitgebreid assortiment aan wijn, gedistilleerd en speciaalbier. Maar we bieden meer dan alleen drank — we creëren belevenissen.</p>
-          <p class="text-charcoal-600 leading-relaxed">Wij selecteren onze wijnen met veel zorg en passie. Exclusieve wijnen uit Italië, Frankrijk en Californië, met snelle levertijden door korte lijnen met producenten.</p>
-        </div>
-        <div>
-          <h2 class="text-2xl font-bold mb-4">Het Karakter van Onze Wijnen</h2>
-          <ul class="space-y-3 text-charcoal-600">
-            <li class="flex items-start gap-3"><svg class="w-5 h-5 text-brand-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z"/></svg>Stoer en karaktervol</li>
-            <li class="flex items-start gap-3"><svg class="w-5 h-5 text-brand-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z"/></svg>Fris tot vol, van hoge kwaliteit</li>
-            <li class="flex items-start gap-3"><svg class="w-5 h-5 text-brand-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z"/></svg>Traditioneel met een moderne twist</li>
-            <li class="flex items-start gap-3"><svg class="w-5 h-5 text-brand-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z"/></svg>Wisselend en verrassend assortiment</li>
-            <li class="flex items-start gap-3"><svg class="w-5 h-5 text-brand-500 mt-0.5 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.704 4.153a.75.75 0 0 1 .143 1.052l-8 10.5a.75.75 0 0 1-1.127.075l-4.5-4.5a.75.75 0 0 1 1.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 0 1 1.05-.143Z"/></svg>Perfect als uniek cadeau</li>
-          </ul>
-        </div>
-      </div>
+<section class="section">
+<div class="container">
+<div class="grid-2">
+<div>
+<h2>Wijn- & Bierspecialist</h2>
+<p style="font-size:18px;margin-top:16px">Food Loods Oss is meer dan een groothandel — wij zijn specialist in wijn en speciaalbier. Ons team proeft, selecteert en adviseert zodat u altijd de perfecte match vindt voor uw kaart of gelegenheid.</p>
+<p style="margin-top:16px">Of het nu gaat om een frisse witte wijn bij vis, een volle rode bij wild, of een bijzonder speciaalbier — wij denken met u mee.</p>
+<ul class="check-list">
+<li>Persoonlijk wijnadvies op maat</li>
+<li>Uitgebreid assortiment speciaalbieren</li>
+<li>Regelmatige proeverijen en masterclasses</li>
+<li>Wijnkaart samenstelling voor uw zaak</li>
+<li>Seizoensgebonden selecties en aanbiedingen</li>
+<li>Levering aan huis en horecabedrijven</li>
+</ul>
+</div>
+<img src="images/google/google_place_2.jpg" alt="Wijn & bier selectie" style="border-radius:12px" loading="lazy">
+</div>
+</div>
+</section>
 
-      <h2 class="text-2xl font-bold mb-6">Activiteiten & Beleving</h2>
-      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        <div class="bg-white rounded-xl p-6 shadow-sm"><h3 class="font-bold mb-2">Wijn-spijsavonden</h3><p class="text-charcoal-500 text-sm">Laat je verrassen door perfecte smaakcombinaties</p></div>
-        <div class="bg-white rounded-xl p-6 shadow-sm"><h3 class="font-bold mb-2">Workshops</h3><p class="text-charcoal-500 text-sm">Leer de kunst van het proeven en combineren</p></div>
-        <div class="bg-white rounded-xl p-6 shadow-sm"><h3 class="font-bold mb-2">Recepties & Events</h3><p class="text-charcoal-500 text-sm">Voor een onvergetelijke ervaring</p></div>
-        <div class="bg-white rounded-xl p-6 shadow-sm"><h3 class="font-bold mb-2">Persoonlijk Advies</h3><p class="text-charcoal-500 text-sm">Begeleiding bij jouw perfecte wijnkeuze</p></div>
-        <div class="bg-white rounded-xl p-6 shadow-sm"><h3 class="font-bold mb-2">Projecten & Maatwerk</h3><p class="text-charcoal-500 text-sm">Altijd met wijn als stralend middelpunt</p></div>
-        <div class="bg-white rounded-xl p-6 shadow-sm"><h3 class="font-bold mb-2">Familiebedrijf</h3><p class="text-charcoal-500 text-sm">Korte lijnen met producenten, persoonlijke aandacht</p></div>
-      </div>
-    </div>
-  </section>
+<section class="section" style="background:#fff">
+<div class="container">
+<h2 style="text-align:center;margin-bottom:48px">Activiteiten & Evenementen</h2>
+<div class="grid-3">
+<div class="card" style="text-align:center">
+<svg class="card-icon" style="margin:0 auto 16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9.813 15.904L9 18.75l-.813-2.846a4.5 4.5 0 00-3.09-3.09L2.25 12l2.846-.813a4.5 4.5 0 003.09-3.09L9 5.25l.813 2.846a4.5 4.5 0 003.09 3.09L15.75 12l-2.846.813a4.5 4.5 0 00-3.09 3.09zM18.259 8.715L18 9.75l-.259-1.035a3.375 3.375 0 00-2.455-2.456L14.25 6l1.036-.259a3.375 3.375 0 002.455-2.456L18 2.25l.259 1.035a3.375 3.375 0 002.455 2.456L21.75 6l-1.036.259a3.375 3.375 0 00-2.455 2.456zM16.894 20.567L16.5 21.75l-.394-1.183a2.25 2.25 0 00-1.423-1.423L13.5 18.75l1.183-.394a2.25 2.25 0 001.423-1.423l.394-1.183.394 1.183a2.25 2.25 0 001.423 1.423l1.183.394-1.183.394a2.25 2.25 0 00-1.423 1.423z"/></svg>
+<h3>Wijnproeverij</h3>
+<p>Ontdek nieuwe wijnen onder begeleiding van onze sommelier. Leerzaam en gezellig.</p>
+</div>
+<div class="card" style="text-align:center">
+<svg class="card-icon" style="margin:0 auto 16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z"/></svg>
+<h3>Bierproeverij</h3>
+<p>Van Belgisch trappist tot lokaal craft — proef en ontdek bijzondere bieren.</p>
+</div>
+<div class="card" style="text-align:center">
+<svg class="card-icon" style="margin:0 auto 16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342"/></svg>
+<h3>Masterclass</h3>
+<p>Verdiep uw kennis met onze masterclasses over wijn, bier en food pairing.</p>
+</div>
+<div class="card" style="text-align:center">
+<svg class="card-icon" style="margin:0 auto 16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M21 11.25v8.25a1.5 1.5 0 01-1.5 1.5H5.25a1.5 1.5 0 01-1.5-1.5v-8.25M12 4.875A2.625 2.625 0 109.375 7.5H12m0-2.625V7.5m0-2.625A2.625 2.625 0 1114.625 7.5H12m0 0V21m-8.625-9.75h18c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125h-18c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z"/></svg>
+<h3>Bedrijfsuitje</h3>
+<p>Organiseer een memorabel bedrijfsuitje met proeverij, workshop en hapjes.</p>
+</div>
+<div class="card" style="text-align:center">
+<svg class="card-icon" style="margin:0 auto 16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8.25v-1.5m0 1.5c-1.355 0-2.697.056-4.024.166C6.845 8.51 6 9.473 6 10.608v2.513m6-4.87c1.355 0 2.697.055 4.024.165C17.155 8.51 18 9.473 18 10.608v2.513m-3-4.87v-1.5m-6 1.5v-1.5m12 9.75l-1.5.75a3.354 3.354 0 01-3 0 3.354 3.354 0 00-3 0 3.354 3.354 0 01-3 0 3.354 3.354 0 00-3 0 3.354 3.354 0 01-3 0L3 16.5m15-3.38a48.474 48.474 0 00-6-.37c-2.032 0-4.034.126-6 .37"/></svg>
+<h3>Wijn & Spijs</h3>
+<p>Ervaar de perfecte combinatie van wijn en gerechten in onze demonstratiekeuken.</p>
+</div>
+<div class="card" style="text-align:center">
+<svg class="card-icon" style="margin:0 auto 16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 012.25-2.25h13.5A2.25 2.25 0 0121 7.5v11.25m-18 0A2.25 2.25 0 005.25 21h13.5A2.25 2.25 0 0021 18.75m-18 0v-7.5A2.25 2.25 0 015.25 9h13.5A2.25 2.25 0 0121 11.25v7.5"/></svg>
+<h3>Seizoensevent</h3>
+<p>Speciale proeverijen rond feestdagen en seizoenen. Altijd verrassend.</p>
+</div>
+</div>
+</div>
+</section>
 
-  <section class="bg-brand-500 py-14">
-    <div class="max-w-3xl mx-auto px-4 text-center">
-      <h2 class="text-2xl font-bold text-white mb-4">Op zoek naar de perfecte fles?</h2>
-      <a href="tel:0655566052" class="bg-white text-brand-600 font-bold px-6 py-3 rounded-lg cursor-pointer inline-block">Bel ons: 06 555 660 52</a>
-    </div>
-  </section>
+<section class="cta-bar">
+<div class="container">
+<h2>Een Proeverij Organiseren?</h2>
+<p>Neem contact op en wij plannen samen een onvergetelijke ervaring</p>
+<a href="contact.html" class="btn-primary" style="background:#fff;color:var(--cta)">Neem contact op</a>
+</div>
+</section>
 
-  <footer class="bg-charcoal-950 text-charcoal-300 py-12">
-    <div class="max-w-7xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center text-sm gap-4">
-      <p>&copy; 2026 Food Loods Oss</p>
-      <p>Gebouwd door <a href="https://www.code-lieshout.nl" class="text-brand-400 hover:text-brand-300 cursor-pointer" target="_blank">Code Lieshout</a></p>
-    </div>
-  </footer>
-  <script>document.getElementById('menuBtn').addEventListener('click',()=>{document.getElementById('mobileMenu').classList.toggle('hidden')})</script>
+<footer><div class="container"><div class="footer-grid"><div><img src="images/logo-small.jpeg" alt="Food Loods Oss" style="height:48px;margin-bottom:16px;border-radius:6px"><p>Horecagroothandel, slijterij en BBQ specialist in Oss en Gemert.</p></div><div><h3>Assortiment</h3><a href="vlees.html">Vlees & Vleeswaren</a><a href="wijn-bier.html">Wijn & Bier</a><a href="kamados.html">Kamado's & BBQ</a><a href="workshops.html">Workshops</a></div><div><h3>Contact</h3><p>Angelenweg 77, 5349 TA Oss</p><p>Molenstraat 45, 5421 KD Gemert</p><p style="margin-top:8px"><a href="tel:0655566052">06 555 660 52</a></p><p><a href="tel:0412640637">0412 640 637</a></p><p><a href="mailto:info@euromeatoss.nl">info@euromeatoss.nl</a></p></div><div><h3>Openingstijden</h3><p>Ma - Vr: 09:00 - 18:00</p><p>Za: 09:00 - 17:00</p><p>Zo: Gesloten</p><p style="margin-top:12px"><a href="https://facebook.com/foodloodsoss" target="_blank" rel="noopener">Facebook</a></p></div></div><div class="footer-bottom"><p>&copy; 2025 Food Loods Oss — Gebouwd door <a href="https://code-lieshout.nl" target="_blank" rel="noopener" style="opacity:1;display:inline">Code Lieshout</a></p></div></div></footer>
 </body>
 </html>

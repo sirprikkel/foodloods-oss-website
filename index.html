@@ -1,338 +1,365 @@
 <!DOCTYPE html>
 <html lang="nl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Food Loods Oss — Kleine Groothandel voor Ondernemers</title>
-  <meta name="description" content="Food Loods Oss: dé kleine groothandel voor zelfstandige ondernemers. Vers vlees, wijn, bier, kamado's, workshops en meer. Angelenweg 77, Oss.">
-  <script src="https://cdn.tailwindcss.com"></script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="icon" href="images/logo.jpeg" type="image/jpeg">
-  <script>
-    tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            brand: { 50:'#fef7ee', 100:'#fdebd3', 200:'#f9d3a5', 300:'#f5b56d', 400:'#f08c32', 500:'#ee7210', 600:'#d55a09', 700:'#b1420b', 800:'#8d3510', 900:'#782e10' },
-            charcoal: { 50:'#f6f6f6', 100:'#e7e7e7', 200:'#d1d1d1', 300:'#b0b0b0', 400:'#888888', 500:'#6d6d6d', 600:'#5d5d5d', 700:'#4f4f4f', 800:'#3d3d3d', 900:'#1a1a1a', 950:'#0d0d0d' },
-            ember: { 500:'#c0392b', 600:'#a93226', 700:'#922b21' }
-          },
-          fontFamily: { sans: ['Plus Jakarta Sans', 'sans-serif'] }
-        }
-      }
-    }
-  </script>
-  <style>
-    html { scroll-behavior: smooth; }
-    .hero-overlay { background: linear-gradient(to bottom, rgba(13,13,13,0.6) 0%, rgba(13,13,13,0.3) 50%, rgba(13,13,13,0.7) 100%); }
-    .nav-blur { backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Food Loods Oss — Horecagroothandel & Slijterij</title>
+<meta name="description" content="Food Loods Oss: horecagroothandel, slijterij, vakslagerij en BBQ specialist in Oss. Kwaliteitsvlees, wijnen, kamado's en workshops.">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&family=Cabin:wght@400;500;600;700&display=swap');
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{--primary:#DC2626;--secondary:#F87171;--cta:#CA8A04;--bg:#FEF2F2;--text:#450A0A;--dark:#450A0A}
+html{scroll-behavior:smooth}
+body{font-family:'Cabin',sans-serif;color:var(--text);background:var(--bg);line-height:1.6}
+h1,h2,h3{font-family:'Amatic SC',cursive;font-weight:700}
+h1{font-size:clamp(48px,8vw,80px);line-height:1.1}
+h2{font-size:clamp(36px,6vw,56px);line-height:1.2}
+h3{font-size:clamp(28px,4vw,36px)}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;height:auto;display:block}
+.container{max-width:1200px;margin:0 auto;padding:0 16px}
+@media(min-width:640px){.container{padding:0 24px}}
+@media(min-width:1024px){.container{padding:0 32px}}
+/* Buttons */
+.btn-primary{display:inline-block;background:var(--cta);color:#fff;padding:14px 32px;border-radius:8px;font-weight:600;font-size:18px;cursor:pointer;transition:all .2s;border:none}
+.btn-primary:hover{opacity:.9;transform:translateY(-1px)}
+.btn-secondary{display:inline-block;background:transparent;color:var(--primary);padding:14px 32px;border-radius:8px;font-weight:600;font-size:18px;cursor:pointer;transition:all .2s;border:2px solid var(--primary)}
+.btn-secondary:hover{background:var(--primary);color:#fff}
+/* Nav */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(69,10,10,.92);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;max-width:1200px;margin:0 auto}
+@media(min-width:640px){.nav-inner{padding:12px 24px}}
+@media(min-width:1024px){.nav-inner{padding:12px 32px}}
+nav img{height:40px;width:auto}
+.nav-links{display:none;gap:8px;align-items:center}
+.nav-links a{color:#FEF2F2;padding:8px 14px;border-radius:6px;font-weight:500;transition:color .2s;cursor:pointer;font-size:15px}
+.nav-links a:hover,.nav-links a.active{color:var(--cta)}
+.nav-cta{background:var(--cta);color:#fff!important;border-radius:8px;padding:10px 20px!important;font-weight:600}
+.nav-cta:hover{opacity:.9}
+@media(min-width:900px){.nav-links{display:flex}}
+.hamburger{display:flex;flex-direction:column;gap:5px;cursor:pointer;padding:8px;background:none;border:none}
+.hamburger span{width:24px;height:2px;background:#FEF2F2;border-radius:2px;transition:all .3s}
+@media(min-width:900px){.hamburger{display:none}}
+.mobile-menu{display:none;position:fixed;top:64px;left:0;right:0;background:rgba(69,10,10,.97);padding:24px;flex-direction:column;gap:8px;backdrop-filter:blur(12px)}
+.mobile-menu.open{display:flex}
+.mobile-menu a{color:#FEF2F2;padding:12px 16px;font-size:18px;border-radius:8px;cursor:pointer}
+.mobile-menu a:hover,.mobile-menu a.active{color:var(--cta)}
+/* Hero */
+.hero{position:relative;min-height:90vh;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background-size:cover;background-position:center;z-index:0}
+.hero-bg::after{content:'';position:absolute;inset:0;background:linear-gradient(to bottom,rgba(69,10,10,.65),rgba(69,10,10,.8))}
+.hero-content{position:relative;z-index:1;color:#FEF2F2;padding:120px 16px 80px}
+.hero-content p{font-size:clamp(18px,2.5vw,24px);margin:16px 0 32px;max-width:600px;margin-left:auto;margin-right:auto;opacity:.9}
+.hero-buttons{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+/* Stats */
+.stats{background:var(--primary);color:#fff;padding:48px 0}
+.stats-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:24px;text-align:center}
+@media(min-width:768px){.stats-grid{grid-template-columns:repeat(4,1fr)}}
+.stat-item h3{color:#fff;margin-bottom:4px}
+.stat-item p{font-size:14px;opacity:.85}
+/* Cards */
+.card{background:var(--bg);border-radius:12px;box-shadow:0 4px 6px -1px rgba(0,0,0,.1);padding:32px;transition:all .3s;cursor:pointer}
+.card:hover{box-shadow:0 10px 25px -5px rgba(0,0,0,.15);transform:translateY(-2px)}
+.card-icon{width:48px;height:48px;margin-bottom:16px;color:var(--primary)}
+.card h3{margin-bottom:8px}
+.card p{font-size:15px;opacity:.85}
+/* Section */
+.section{padding:80px 0}
+.section-title{text-align:center;margin-bottom:48px}
+.section-title p{font-size:18px;opacity:.8;max-width:600px;margin:8px auto 0}
+/* Grid */
+.grid-2{display:grid;gap:48px;align-items:center}
+@media(min-width:768px){.grid-2{grid-template-columns:1fr 1fr}}
+.grid-3{display:grid;gap:24px}
+@media(min-width:640px){.grid-3{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1024px){.grid-3{grid-template-columns:repeat(3,1fr)}}
+/* USP */
+.usp-bar{background:var(--dark);color:#FEF2F2;padding:48px 0}
+.usp-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:32px}
+@media(min-width:768px){.usp-grid{grid-template-columns:repeat(4,1fr)}}
+.usp-item{text-align:center}
+.usp-item svg{width:40px;height:40px;margin:0 auto 12px;color:var(--cta)}
+.usp-item h3{color:#FEF2F2;font-size:24px}
+.usp-item p{font-size:14px;opacity:.8}
+/* Gallery */
+.gallery-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+@media(min-width:768px){.gallery-grid{grid-template-columns:repeat(4,1fr)}}
+.gallery-grid img{width:100%;height:200px;object-fit:cover;border-radius:12px;cursor:pointer;transition:transform .3s}
+.gallery-grid img:hover{transform:scale(1.03)}
+/* Reviews */
+.review-card{background:#fff;border-radius:12px;padding:32px;box-shadow:0 4px 6px -1px rgba(0,0,0,.08)}
+.review-stars{color:var(--cta);font-size:20px;margin-bottom:12px;letter-spacing:2px}
+.review-card p{font-style:italic;margin-bottom:12px}
+.review-author{font-weight:600;font-size:14px}
+/* CTA bar */
+.cta-bar{background:var(--cta);color:#fff;padding:64px 0;text-align:center}
+.cta-bar h2{color:#fff;margin-bottom:16px}
+.cta-bar-links{display:flex;gap:24px;justify-content:center;flex-wrap:wrap;margin-top:24px}
+.cta-bar-links a{color:#fff;font-size:20px;font-weight:600;cursor:pointer;border-bottom:2px solid rgba(255,255,255,.4);padding-bottom:2px;transition:border-color .2s}
+.cta-bar-links a:hover{border-color:#fff}
+/* Footer */
+footer{background:var(--dark);color:#FEF2F2;padding:64px 0 24px}
+.footer-grid{display:grid;gap:32px;margin-bottom:48px}
+@media(min-width:768px){.footer-grid{grid-template-columns:repeat(4,1fr)}}
+footer h3{color:var(--cta);font-size:28px;margin-bottom:16px}
+footer a{color:#FEF2F2;opacity:.8;display:block;padding:4px 0;cursor:pointer;transition:opacity .2s}
+footer a:hover{opacity:1}
+footer p{opacity:.8;font-size:14px;line-height:1.8}
+.footer-bottom{border-top:1px solid rgba(254,242,242,.15);padding-top:24px;text-align:center;font-size:13px;opacity:.6}
+/* Lightbox */
+.lightbox{display:none;position:fixed;inset:0;background:rgba(0,0,0,.9);z-index:200;align-items:center;justify-content:center;cursor:pointer}
+.lightbox.open{display:flex}
+.lightbox img{max-width:90vw;max-height:90vh;border-radius:12px}
+/* CTA card special */
+.card-cta{background:var(--cta);color:#fff}
+.card-cta h3{color:#fff}
+.card-cta p{color:rgba(255,255,255,.9)}
+.card-cta .btn-cta-white{background:#fff;color:var(--cta);padding:12px 24px;border-radius:8px;font-weight:600;display:inline-block;margin-top:12px;cursor:pointer;transition:all .2s}
+.card-cta .btn-cta-white:hover{transform:translateY(-1px)}
+</style>
 </head>
-<body class="font-sans text-charcoal-900 bg-charcoal-50">
+<body>
+<!-- Nav -->
+<nav>
+<div class="nav-inner">
+<a href="index.html"><img src="images/logo-small.jpeg" alt="Food Loods Oss"></a>
+<div class="nav-links">
+<a href="index.html" class="active">Home</a>
+<a href="vlees.html">Vlees</a>
+<a href="wijn-bier.html">Wijn & Bier</a>
+<a href="kamados.html">Kamado's</a>
+<a href="workshops.html">Workshops</a>
+<a href="contact.html">Contact</a>
+<a href="klant-worden.html" class="nav-cta">Klant worden</a>
+</div>
+<button class="hamburger" onclick="document.querySelector('.mobile-menu').classList.toggle('open')" aria-label="Menu">
+<span></span><span></span><span></span>
+</button>
+</div>
+<div class="mobile-menu">
+<a href="index.html" class="active">Home</a>
+<a href="vlees.html">Vlees</a>
+<a href="wijn-bier.html">Wijn & Bier</a>
+<a href="kamados.html">Kamado's</a>
+<a href="workshops.html">Workshops</a>
+<a href="contact.html">Contact</a>
+<a href="klant-worden.html" class="nav-cta" style="text-align:center;margin-top:8px">Klant worden</a>
+</div>
+</nav>
 
-  <!-- NAVBAR -->
-  <nav class="fixed top-0 w-full z-50 bg-charcoal-950/90 nav-blur border-b border-charcoal-800">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
-      <a href="index.html" class="flex items-center gap-3">
-        <img src="images/logo.jpeg" alt="Food Loods Oss logo" class="h-10 w-10 rounded-full object-cover">
-        <span class="text-white font-bold text-lg tracking-tight">Food Loods <span class="text-brand-400">Oss</span></span>
-      </a>
-      <div class="hidden md:flex items-center gap-6 text-sm font-medium text-charcoal-200">
-        <a href="vlees.html" class="hover:text-brand-400 transition-colors duration-200 cursor-pointer">Vlees</a>
-        <a href="wijn-bier.html" class="hover:text-brand-400 transition-colors duration-200 cursor-pointer">Wijn & Bier</a>
-        <a href="kamados.html" class="hover:text-brand-400 transition-colors duration-200 cursor-pointer">Kamado's</a>
-        <a href="workshops.html" class="hover:text-brand-400 transition-colors duration-200 cursor-pointer">Workshops</a>
-        <a href="contact.html" class="hover:text-brand-400 transition-colors duration-200 cursor-pointer">Over Ons</a>
-        <a href="klant-worden.html" class="bg-brand-500 hover:bg-brand-600 text-white px-4 py-2 rounded-lg transition-colors duration-200 cursor-pointer">Klant worden</a>
-      </div>
-      <!-- Mobile hamburger -->
-      <button id="menuBtn" class="md:hidden text-white cursor-pointer" aria-label="Menu">
-        <svg class="w-6 h-6" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/></svg>
-      </button>
-    </div>
-    <!-- Mobile menu -->
-    <div id="mobileMenu" class="hidden md:hidden bg-charcoal-950/95 border-t border-charcoal-800 px-4 pb-4">
-      <a href="vlees.html" class="block py-3 text-charcoal-200 hover:text-brand-400 border-b border-charcoal-800 cursor-pointer">Vlees</a>
-      <a href="wijn-bier.html" class="block py-3 text-charcoal-200 hover:text-brand-400 border-b border-charcoal-800 cursor-pointer">Wijn & Bier</a>
-      <a href="kamados.html" class="block py-3 text-charcoal-200 hover:text-brand-400 border-b border-charcoal-800 cursor-pointer">Kamado's</a>
-      <a href="workshops.html" class="block py-3 text-charcoal-200 hover:text-brand-400 border-b border-charcoal-800 cursor-pointer">Workshops</a>
-      <a href="contact.html" class="block py-3 text-charcoal-200 hover:text-brand-400 border-b border-charcoal-800 cursor-pointer">Over Ons</a>
-      <a href="klant-worden.html" class="block mt-3 text-center bg-brand-500 text-white py-3 rounded-lg cursor-pointer">Klant worden</a>
-    </div>
-  </nav>
+<!-- Hero -->
+<section class="hero">
+<div class="hero-bg" style="background-image:url('images/team.jpg')"></div>
+<div class="hero-content">
+<h1>De Horecagroothandel van Oss</h1>
+<p>Kwaliteitsvlees, ambachtelijke wijnen, kamado's en meer. Voor horeca én particulier.</p>
+<div class="hero-buttons">
+<a href="klant-worden.html" class="btn-primary">Klant worden</a>
+<a href="contact.html" class="btn-secondary" style="color:#FEF2F2;border-color:#FEF2F2">Neem contact op</a>
+</div>
+</div>
+</section>
 
-  <!-- HERO -->
-  <section class="relative h-screen min-h-[600px] flex items-center justify-center overflow-hidden">
-    <img src="images/team.jpg" alt="Food Loods Oss team" class="absolute inset-0 w-full h-full object-cover">
-    <div class="hero-overlay absolute inset-0"></div>
-    <div class="relative z-10 text-center px-4 max-w-3xl">
-      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6">
-        Dé Kleine Groothandel<br>voor <span class="text-brand-400">Ondernemers</span>
-      </h1>
-      <p class="text-lg sm:text-xl text-charcoal-200 mb-8 max-w-xl mx-auto">Vers vlees van horecakwaliteit, exclusieve wijnen, kamado's en workshops — alles onder één dak in Oss.</p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="klant-worden.html" class="bg-brand-500 hover:bg-brand-600 text-white font-semibold px-8 py-4 rounded-lg text-lg transition-colors duration-200 cursor-pointer">Klant worden</a>
-        <a href="#diensten" class="border-2 border-white/30 hover:border-white text-white font-semibold px-8 py-4 rounded-lg text-lg transition-colors duration-200 cursor-pointer">Bekijk assortiment</a>
-      </div>
-    </div>
-  </section>
+<!-- Stats -->
+<section class="stats">
+<div class="container">
+<div class="stats-grid">
+<div class="stat-item"><h3>4.5/5</h3><p>Google Rating (65 reviews)</p></div>
+<div class="stat-item"><h3>2</h3><p>Vestigingen</p></div>
+<div class="stat-item"><h3>6</h3><p>Dagen per week open</p></div>
+<div class="stat-item"><h3>100%</h3><p>Horecakwaliteit</p></div>
+</div>
+</div>
+</section>
 
-  <!-- STATS -->
-  <section class="bg-charcoal-950 py-12">
-    <div class="max-w-5xl mx-auto px-4 grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-      <div>
-        <div class="text-3xl sm:text-4xl font-extrabold text-brand-400">4.5</div>
-        <div class="text-charcoal-300 text-sm mt-1">Google Rating (65 reviews)</div>
-      </div>
-      <div>
-        <div class="text-3xl sm:text-4xl font-extrabold text-brand-400">2</div>
-        <div class="text-charcoal-300 text-sm mt-1">Vestigingen</div>
-      </div>
-      <div>
-        <div class="text-3xl sm:text-4xl font-extrabold text-brand-400">6</div>
-        <div class="text-charcoal-300 text-sm mt-1">Dagen p/w open</div>
-      </div>
-      <div>
-        <div class="text-3xl sm:text-4xl font-extrabold text-brand-400">100%</div>
-        <div class="text-charcoal-300 text-sm mt-1">Horecakwaliteit</div>
-      </div>
-    </div>
-  </section>
+<!-- Diensten -->
+<section class="section">
+<div class="container">
+<div class="section-title">
+<h2>Ons Assortiment</h2>
+<p>Van ambachtelijk vlees tot exclusieve wijnen — alles onder één dak</p>
+</div>
+<div class="grid-3">
+<a href="vlees.html" class="card">
+<svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15.362 5.214A8.252 8.252 0 0112 21 8.25 8.25 0 016.038 7.048 8.287 8.287 0 009 9.6a8.983 8.983 0 013.361-6.867 8.21 8.21 0 003 2.48z"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 18a3.75 3.75 0 00.495-7.467 5.99 5.99 0 00-1.925 3.546 5.974 5.974 0 01-2.133-1A3.75 3.75 0 0012 18z"/></svg>
+<h3>Vlees & Vleeswaren</h3>
+<p>Eigen rundvee, vakkundig geslacht en 14 dagen gerijpt. Charolais en Blond d'Aquitaine van topkwaliteit.</p>
+</a>
+<a href="wijn-bier.html" class="card">
+<svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+<h3>Wijn & Bier</h3>
+<p>Specialist in wijnen en speciaalbieren. Proeverijen, wijnadvies en een uitgebreid assortiment voor elk moment.</p>
+</a>
+<a href="kamados.html" class="card">
+<svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.386l-1.591 1.591M21 12h-2.25m-.386 6.364l-1.591-1.591M12 18.75V21m-4.773-4.227l-1.591 1.591M5.25 12H3m4.227-4.773L5.636 5.636M15.75 12a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0z"/></svg>
+<h3>Kamado's & BBQ</h3>
+<p>Uitgebreide showroom met kamado's, accessoires, kruiden en rubs. Alles voor de perfecte barbecue.</p>
+</a>
+<a href="workshops.html" class="card">
+<svg class="card-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342"/></svg>
+<h3>Workshops</h3>
+<p>Demonstratiekeuken voor workshops, proeverijen en bedrijfsevenementen. Professioneel ingericht.</p>
+</a>
+<div class="card" style="text-align:center">
+<svg class="card-icon" style="margin:0 auto 16px" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M12 8.25v-1.5m0 1.5c-1.355 0-2.697.056-4.024.166C6.845 8.51 6 9.473 6 10.608v2.513m6-4.87c1.355 0 2.697.055 4.024.165C17.155 8.51 18 9.473 18 10.608v2.513m-3-4.87v-1.5m-6 1.5v-1.5m12 9.75l-1.5.75a3.354 3.354 0 01-3 0 3.354 3.354 0 00-3 0 3.354 3.354 0 01-3 0 3.354 3.354 0 00-3 0 3.354 3.354 0 01-3 0L3 16.5m15-3.38a48.474 48.474 0 00-6-.37c-2.032 0-4.034.126-6 .37"/></svg>
+<h3>Broodje van de Week</h3>
+<p>Elke do + vr vers belegd. Combideal voor slechts &euro;6,95. Bestel via WhatsApp v&oacute;&oacute;r 10:30!</p>
+</div>
+<a href="klant-worden.html" class="card card-cta">
+<svg class="card-icon" style="color:#fff" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M18 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zM3 19.235v-.11a6.375 6.375 0 0112.75 0v.109A12.318 12.318 0 019.374 21c-2.331 0-4.512-.645-6.374-1.766z"/></svg>
+<h3>Klant worden</h3>
+<p>Schrijf je in als horecaklant en profiteer van groothandelsprijzen en persoonlijk advies.</p>
+<span class="btn-cta-white">Aanmelden</span>
+</a>
+</div>
+</div>
+</section>
 
-  <!-- DIENSTEN -->
-  <section id="diensten" class="py-20 lg:py-28 bg-charcoal-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="text-center mb-16">
-        <h2 class="text-3xl sm:text-4xl font-extrabold text-charcoal-900">Ons Aanbod</h2>
-        <p class="mt-4 text-charcoal-500 max-w-2xl mx-auto">Van vers vlees tot exclusieve wijnen — ontdek wat Food Loods Oss voor jouw bedrijf kan betekenen.</p>
-      </div>
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <!-- Card: Vlees -->
-        <a href="vlees.html" class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer">
-          <div class="h-48 overflow-hidden">
-            <img src="images/vlees.jpg" alt="Vers vlees" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold text-charcoal-900 group-hover:text-brand-600 transition-colors duration-200">Vers Vlees</h3>
-            <p class="mt-2 text-charcoal-500 text-sm">Horecakwaliteit vlees, dagelijks vers. Van Charolais tot op maat gesneden spiesen en burgers.</p>
-          </div>
-        </a>
-        <!-- Card: Wijn & Bier -->
-        <a href="wijn-bier.html" class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer">
-          <div class="h-48 overflow-hidden">
-            <img src="images/cocktails.jpg" alt="Wijn en bier" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold text-charcoal-900 group-hover:text-brand-600 transition-colors duration-200">Wijn, Bier & Gedistilleerd</h3>
-            <p class="mt-2 text-charcoal-500 text-sm">Exclusieve wijnen uit Italië, Frankrijk en Californië. Speciaalbieren en persoonlijk advies.</p>
-          </div>
-        </a>
-        <!-- Card: Kamado's -->
-        <a href="kamados.html" class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer">
-          <div class="h-48 overflow-hidden">
-            <img src="images/google/google_place_3.jpg" alt="Kamado showroom" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold text-charcoal-900 group-hover:text-brand-600 transition-colors duration-200">Kamado's & BBQ</h3>
-            <p class="mt-2 text-charcoal-500 text-sm">Showroom met Bastard kamado's, accessoires, houtskool, kruiden en rubs. Advies in de winkel.</p>
-          </div>
-        </a>
-        <!-- Card: Workshops -->
-        <a href="workshops.html" class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer">
-          <div class="h-48 overflow-hidden">
-            <img src="images/winkel.jpg" alt="Workshops" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold text-charcoal-900 group-hover:text-brand-600 transition-colors duration-200">Workshops & Events</h3>
-            <p class="mt-2 text-charcoal-500 text-sm">Wijnproeverijen, BBQ-workshops en ruimteverhuur voor vergaderingen en borrels.</p>
-          </div>
-        </a>
-        <!-- Card: Broodje vd Week -->
-        <a href="#broodje" class="group bg-white rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer">
-          <div class="h-48 overflow-hidden">
-            <img src="images/broodje.jpg" alt="Broodje van de week" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
-          </div>
-          <div class="p-6">
-            <h3 class="text-xl font-bold text-charcoal-900 group-hover:text-brand-600 transition-colors duration-200">Broodje van de Week</h3>
-            <p class="mt-2 text-charcoal-500 text-sm">Do & vr: combideal voor €6,95. Bestel via WhatsApp vóór 10:30, afhalen 11:00–14:00.</p>
-          </div>
-        </a>
-        <!-- Card: Klant worden -->
-        <a href="klant-worden.html" class="group bg-brand-500 rounded-2xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 cursor-pointer">
-          <div class="p-6 flex flex-col justify-center h-full min-h-[280px]">
-            <svg class="w-12 h-12 text-white/80 mb-4" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M18 7.5v3m0 0v3m0-3h3m-3 0h-3m-2.25-4.125a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0ZM3 19.235v-.11a6.375 6.375 0 0 1 12.75 0v.109A12.318 12.318 0 0 1 9.374 21c-2.331 0-4.512-.645-6.374-1.766Z"/></svg>
-            <h3 class="text-xl font-bold text-white">Klant worden?</h3>
-            <p class="mt-2 text-white/80 text-sm">Iedereen met een KvK-nummer is welkom. Vraag je klantenpas aan in de winkel of online.</p>
-          </div>
-        </a>
-      </div>
-    </div>
-  </section>
+<!-- Over Ons -->
+<section class="section" style="background:#fff">
+<div class="container">
+<div class="grid-2">
+<img src="images/team2.jpg" alt="Het team van Food Loods Oss" style="border-radius:12px" loading="lazy">
+<div>
+<h2>Over Food Loods Oss</h2>
+<p style="font-size:18px;margin-top:16px">Food Loods Oss is dé horecagroothandel in de regio. Met een passie voor kwaliteit bieden wij een uitgebreid assortiment vlees, wijnen, bieren, kamado's en nog veel meer.</p>
+<p style="margin-top:16px">Onze vakslagers selecteren het beste vlees — van eigen rundvee tot exclusieve wildsoorten. Daarnaast zijn wij specialist in wijnen en speciaalbieren, met regelmatig proeverijen en workshops in onze eigen demonstratiekeuken.</p>
+<a href="contact.html" class="btn-primary" style="margin-top:24px">Meer over ons</a>
+</div>
+</div>
+</div>
+</section>
 
-  <!-- OVER ONS -->
-  <section class="py-20 lg:py-28 bg-white">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="grid lg:grid-cols-2 gap-12 items-center">
-        <div>
-          <img src="images/team2.jpg" alt="Het Food Loods team" class="rounded-2xl shadow-lg w-full object-cover h-80 lg:h-[450px]">
-        </div>
-        <div>
-          <h2 class="text-3xl sm:text-4xl font-extrabold text-charcoal-900 mb-6">Meer dan een Groothandel</h2>
-          <p class="text-charcoal-600 leading-relaxed mb-4">Food Loods Oss is een kleine groothandel voor zelfstandige ondernemers. Of je nu horecaklant, kapper of garagebedrijf houder bent — iedereen met een KvK-nummer is welkom.</p>
-          <p class="text-charcoal-600 leading-relaxed mb-4">In onze winkelruimte bevindt zich een professionele demonstratiekeuken voor workshops, productpresentaties, trainingen en proeverijen. Zo bieden wij lokale ondernemers een totaalbeleving op één locatie.</p>
-          <p class="text-charcoal-600 leading-relaxed mb-6">Van oorsprong zijn we horecaleverancier — en die passie voor kwaliteit en service proef je in alles wat we doen.</p>
-          <div class="flex flex-col sm:flex-row gap-4">
-            <a href="contact.html" class="bg-charcoal-900 hover:bg-charcoal-800 text-white font-semibold px-6 py-3 rounded-lg transition-colors duration-200 cursor-pointer text-center">Meer over ons</a>
-            <a href="tel:0655566052" class="border-2 border-charcoal-900 hover:bg-charcoal-900 hover:text-white text-charcoal-900 font-semibold px-6 py-3 rounded-lg transition-colors duration-200 cursor-pointer text-center">Bel ons</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
+<!-- USP -->
+<section class="usp-bar">
+<div class="container">
+<div class="usp-grid">
+<div class="usp-item">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z"/></svg>
+<h3>Topkwaliteit</h3>
+<p>100% horecakwaliteit, altijd vers</p>
+</div>
+<div class="usp-item">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z"/></svg>
+<h3>Persoonlijk</h3>
+<p>Advies op maat, altijd een vast aanspreekpunt</p>
+</div>
+<div class="usp-item">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M8.25 18.75a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h6m-9 0H3.375a1.125 1.125 0 01-1.125-1.125V14.25m17.25 4.5a1.5 1.5 0 01-3 0m3 0a1.5 1.5 0 00-3 0m3 0h1.125c.621 0 1.129-.504 1.09-1.124a17.902 17.902 0 00-3.213-9.193 2.056 2.056 0 00-1.58-.86H14.25M16.5 18.75h-2.25m0-11.177v-.958c0-.568-.422-1.048-.987-1.106a48.554 48.554 0 00-10.026 0 1.106 1.106 0 00-.987 1.106v7.635m12-6.677v6.677m0 4.5v-4.5m0 0h-12"/></svg>
+<h3>Bezorging</h3>
+<p>Levering in de regio, snel en betrouwbaar</p>
+</div>
+<div class="usp-item">
+<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path stroke-linecap="round" stroke-linejoin="round" d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"/></svg>
+<h3>Met Passie</h3>
+<p>Gedreven team met liefde voor het vak</p>
+</div>
+</div>
+</div>
+</section>
 
-  <!-- USP BALK -->
-  <section class="bg-charcoal-950 py-16">
-    <div class="max-w-6xl mx-auto px-4 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
-      <div>
-        <svg class="w-10 h-10 text-brand-400 mx-auto mb-3" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75 11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 0 1-1.043 3.296 3.745 3.745 0 0 1-3.296 1.043A3.745 3.745 0 0 1 12 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 0 1-3.296-1.043 3.745 3.745 0 0 1-1.043-3.296A3.745 3.745 0 0 1 3 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 0 1 1.043-3.296 3.746 3.746 0 0 1 3.296-1.043A3.746 3.746 0 0 1 12 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 0 1 3.296 1.043 3.746 3.746 0 0 1 1.043 3.296A3.745 3.745 0 0 1 21 12Z"/></svg>
-        <h3 class="text-white font-bold">Horecakwaliteit</h3>
-        <p class="text-charcoal-400 text-sm mt-1">Dagelijks vers, professioneel gesneden</p>
-      </div>
-      <div>
-        <svg class="w-10 h-10 text-brand-400 mx-auto mb-3" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0ZM4.501 20.118a7.5 7.5 0 0 1 14.998 0A17.933 17.933 0 0 1 12 21.75c-2.676 0-5.216-.584-7.499-1.632Z"/></svg>
-        <h3 class="text-white font-bold">Persoonlijk Advies</h3>
-        <p class="text-charcoal-400 text-sm mt-1">Vakkennis en service op maat</p>
-      </div>
-      <div>
-        <svg class="w-10 h-10 text-brand-400 mx-auto mb-3" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M15.362 5.214A8.252 8.252 0 0 1 12 21 8.25 8.25 0 0 1 6.038 7.047 8.287 8.287 0 0 0 9 9.601a8.983 8.983 0 0 1 3.361-6.867 8.21 8.21 0 0 0 3 2.48Z"/><path stroke-linecap="round" stroke-linejoin="round" d="M12 18a3.75 3.75 0 0 0 .495-7.468 5.99 5.99 0 0 0-1.925 3.547 5.975 5.975 0 0 1-2.133-1.001A3.75 3.75 0 0 0 12 18Z"/></svg>
-        <h3 class="text-white font-bold">BBQ Specialist</h3>
-        <p class="text-charcoal-400 text-sm mt-1">Kamado showroom & accessoires</p>
-      </div>
-      <div>
-        <svg class="w-10 h-10 text-brand-400 mx-auto mb-3" fill="none" stroke="currentColor" stroke-width="1.5" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" d="M6.75 3v2.25M17.25 3v2.25M3 18.75V7.5a2.25 2.25 0 0 1 2.25-2.25h13.5A2.25 2.25 0 0 1 21 7.5v11.25m-18 0A2.25 2.25 0 0 0 5.25 21h13.5A2.25 2.25 0 0 0 21 18.75m-18 0v-7.5A2.25 2.25 0 0 1 5.25 9h13.5A2.25 2.25 0 0 1 21 11.25v7.5"/></svg>
-        <h3 class="text-white font-bold">Workshops & Events</h3>
-        <p class="text-charcoal-400 text-sm mt-1">Proeverijen, ruimteverhuur en meer</p>
-      </div>
-    </div>
-  </section>
+<!-- Galerij -->
+<section class="section">
+<div class="container">
+<div class="section-title">
+<h2>Een Kijkje in de Loods</h2>
+</div>
+<div class="gallery-grid">
+<img src="images/hero.jpg" alt="Food Loods sfeer" loading="lazy" onclick="openLightbox(this)">
+<img src="images/google/google_place_1.jpg" alt="Food Loods interieur" loading="lazy" onclick="openLightbox(this)">
+<img src="images/google/google_place_2.jpg" alt="Food Loods producten" loading="lazy" onclick="openLightbox(this)">
+<img src="images/broodje.jpg" alt="Broodje van de week" loading="lazy" onclick="openLightbox(this)">
+<img src="images/google/google_place_3.jpg" alt="BBQ afdeling" loading="lazy" onclick="openLightbox(this)">
+<img src="images/google/google_place_4.jpg" alt="Wijnkelder" loading="lazy" onclick="openLightbox(this)">
+<img src="images/menu.jpg" alt="Menu" loading="lazy" onclick="openLightbox(this)">
+<img src="images/google/google_place_5.jpg" alt="Showroom" loading="lazy" onclick="openLightbox(this)">
+</div>
+</div>
+</section>
 
-  <!-- GALERIJ -->
-  <section class="py-20 lg:py-28 bg-charcoal-50">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-3xl sm:text-4xl font-extrabold text-charcoal-900 text-center mb-12">Sfeerimpressie</h2>
-      <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-        <div class="cursor-pointer overflow-hidden rounded-xl" onclick="openLightbox(this)"><img src="images/google/google_place_1.jpg" alt="Food Loods impressie" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-500"></div>
-        <div class="cursor-pointer overflow-hidden rounded-xl" onclick="openLightbox(this)"><img src="images/google/google_place_2.jpg" alt="Food Loods winkel" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-500"></div>
-        <div class="cursor-pointer overflow-hidden rounded-xl" onclick="openLightbox(this)"><img src="images/vlees.jpg" alt="Vers vlees" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-500"></div>
-        <div class="cursor-pointer overflow-hidden rounded-xl" onclick="openLightbox(this)"><img src="images/google/google_place_4.jpg" alt="Food Loods sfeer" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-500"></div>
-        <div class="cursor-pointer overflow-hidden rounded-xl" onclick="openLightbox(this)"><img src="images/cocktails.jpg" alt="Frozen cocktails" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-500"></div>
-        <div class="cursor-pointer overflow-hidden rounded-xl" onclick="openLightbox(this)"><img src="images/google/google_place_5.jpg" alt="Food Loods binnen" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-500"></div>
-        <div class="cursor-pointer overflow-hidden rounded-xl" onclick="openLightbox(this)"><img src="images/team.jpg" alt="Het team" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-500"></div>
-        <div class="cursor-pointer overflow-hidden rounded-xl" onclick="openLightbox(this)"><img src="images/google/google_place_3.jpg" alt="Kamado showroom" class="w-full h-48 object-cover hover:scale-105 transition-transform duration-500"></div>
-      </div>
-    </div>
-  </section>
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox" onclick="this.classList.remove('open')">
+<img id="lightbox-img" src="" alt="Vergrote foto">
+</div>
 
-  <!-- CTA -->
-  <section id="broodje" class="bg-brand-500 py-16">
-    <div class="max-w-4xl mx-auto px-4 text-center">
-      <h2 class="text-3xl sm:text-4xl font-extrabold text-white mb-4">Langskomen of bestellen?</h2>
-      <p class="text-white/80 text-lg mb-8">Bel ons, stuur een WhatsApp of kom langs op de Angelenweg 77 in Oss.</p>
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="tel:0655566052" class="bg-white text-brand-600 font-bold px-8 py-4 rounded-lg hover:bg-charcoal-50 transition-colors duration-200 cursor-pointer text-lg">06 555 660 52</a>
-        <a href="mailto:info@euromeatoss.nl" class="border-2 border-white text-white font-bold px-8 py-4 rounded-lg hover:bg-white hover:text-brand-600 transition-colors duration-200 cursor-pointer text-lg">info@euromeatoss.nl</a>
-      </div>
-    </div>
-  </section>
+<!-- Reviews -->
+<section class="section" style="background:#fff">
+<div class="container">
+<div class="section-title">
+<h2>Wat Onze Klanten Zeggen</h2>
+<p>4.5 uit 5 sterren op Google — 65 beoordelingen</p>
+</div>
+<div class="grid-3">
+<div class="review-card">
+<div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+<p>"Alles is super vers en netjes... heel klantvriendelijk."</p>
+<div class="review-author">Miguel Angel C.</div>
+</div>
+<div class="review-card">
+<div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+<p>"Super zaak. Erg netjes ingericht. Vriendelijke mensen. Alles voor de BBQ."</p>
+<div class="review-author">Rob</div>
+</div>
+<div class="review-card">
+<div class="review-stars">&#9733;&#9733;&#9733;&#9733;&#9734;</div>
+<p>"Leuke zaak, ruim aanbod, sfeervolle inrichting met workshops en proeverijen."</p>
+<div class="review-author">Henry v.d. Boogaard</div>
+</div>
+</div>
+</div>
+</section>
 
-  <!-- REVIEWS -->
-  <section class="py-16 bg-white">
-    <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-      <h2 class="text-2xl font-bold text-charcoal-900 text-center mb-10">Wat onze klanten zeggen</h2>
-      <div class="grid md:grid-cols-3 gap-6">
-        <div class="bg-charcoal-50 rounded-xl p-6">
-          <div class="text-brand-400 text-lg mb-2">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p class="text-charcoal-600 text-sm italic">"Alles is super vers en netjes... heel klantvriendelijk."</p>
-          <p class="mt-3 text-charcoal-900 font-semibold text-sm">— Miguel Angel C.</p>
-        </div>
-        <div class="bg-charcoal-50 rounded-xl p-6">
-          <div class="text-brand-400 text-lg mb-2">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-          <p class="text-charcoal-600 text-sm italic">"Super zaak. Erg netjes ingericht. Vriendelijke mensen. Alles voor de BBQ."</p>
-          <p class="mt-3 text-charcoal-900 font-semibold text-sm">— Rob</p>
-        </div>
-        <div class="bg-charcoal-50 rounded-xl p-6">
-          <div class="text-brand-400 text-lg mb-2">&#9733;&#9733;&#9733;&#9733;</div>
-          <p class="text-charcoal-600 text-sm italic">"Leuke zaak, ruim aanbod, sfeervolle inrichting met workshops en proeverijen."</p>
-          <p class="mt-3 text-charcoal-900 font-semibold text-sm">— Henry v.d. Boogaard</p>
-        </div>
-      </div>
-    </div>
-  </section>
+<!-- CTA -->
+<section class="cta-bar">
+<div class="container">
+<h2>Neem Contact Op</h2>
+<p style="font-size:18px;opacity:.9">Bel ons, mail ons, of kom langs in Oss of Gemert</p>
+<div class="cta-bar-links">
+<a href="tel:0655566052">06 555 660 52</a>
+<a href="mailto:info@euromeatoss.nl">info@euromeatoss.nl</a>
+</div>
+</div>
+</section>
 
-  <!-- FOOTER -->
-  <footer class="bg-charcoal-950 text-charcoal-300 py-16">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-3 gap-10">
-      <div>
-        <div class="flex items-center gap-3 mb-4">
-          <img src="images/logo.jpeg" alt="Food Loods Oss" class="h-10 w-10 rounded-full">
-          <span class="text-white font-bold text-lg">Food Loods <span class="text-brand-400">Oss</span></span>
-        </div>
-        <p class="text-sm leading-relaxed">Kleine groothandel voor zelfstandige ondernemers. Vers vlees, wijn, bier, kamado's en meer.</p>
-      </div>
-      <div>
-        <h4 class="text-white font-bold mb-4">Assortiment</h4>
-        <ul class="space-y-2 text-sm">
-          <li><a href="vlees.html" class="hover:text-brand-400 transition-colors duration-200 cursor-pointer">Vers Vlees</a></li>
-          <li><a href="wijn-bier.html" class="hover:text-brand-400 transition-colors duration-200 cursor-pointer">Wijn, Bier & Gedistilleerd</a></li>
-          <li><a href="kamados.html" class="hover:text-brand-400 transition-colors duration-200 cursor-pointer">Kamado's & Accessoires</a></li>
-          <li><a href="workshops.html" class="hover:text-brand-400 transition-colors duration-200 cursor-pointer">Workshops & Events</a></li>
-          <li><a href="klant-worden.html" class="hover:text-brand-400 transition-colors duration-200 cursor-pointer">Klant worden</a></li>
-        </ul>
-      </div>
-      <div>
-        <h4 class="text-white font-bold mb-4">Contact</h4>
-        <ul class="space-y-2 text-sm">
-          <li>Angelenweg 77, 5349 TA Oss</li>
-          <li><a href="tel:0655566052" class="hover:text-brand-400 cursor-pointer">06 555 660 52</a></li>
-          <li><a href="tel:0412640637" class="hover:text-brand-400 cursor-pointer">0412 640 637</a></li>
-          <li><a href="mailto:info@euromeatoss.nl" class="hover:text-brand-400 cursor-pointer">info@euromeatoss.nl</a></li>
-          <li><a href="https://www.facebook.com/foodloodsoss/" target="_blank" rel="noopener" class="hover:text-brand-400 cursor-pointer">Facebook</a></li>
-        </ul>
-        <div class="mt-4 text-xs text-charcoal-500">
-          <p>Ma–Vr: 09:00–18:00 | Za: 09:00–17:00 | Zo: Gesloten</p>
-        </div>
-      </div>
-    </div>
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 mt-10 pt-6 border-t border-charcoal-800 flex flex-col sm:flex-row justify-between items-center text-xs text-charcoal-500">
-      <p>&copy; 2026 Food Loods Oss. Alle rechten voorbehouden.</p>
-      <p>Gebouwd door <a href="https://www.code-lieshout.nl" class="text-brand-400 hover:text-brand-300 cursor-pointer" target="_blank" rel="noopener">Code Lieshout</a></p>
-    </div>
-  </footer>
+<!-- Footer -->
+<footer>
+<div class="container">
+<div class="footer-grid">
+<div>
+<img src="images/logo-small.jpeg" alt="Food Loods Oss" style="height:48px;margin-bottom:16px;border-radius:6px">
+<p>Horecagroothandel, slijterij en BBQ specialist in Oss en Gemert.</p>
+</div>
+<div>
+<h3>Assortiment</h3>
+<a href="vlees.html">Vlees & Vleeswaren</a>
+<a href="wijn-bier.html">Wijn & Bier</a>
+<a href="kamados.html">Kamado's & BBQ</a>
+<a href="workshops.html">Workshops</a>
+</div>
+<div>
+<h3>Contact</h3>
+<p>Angelenweg 77, 5349 TA Oss</p>
+<p>Molenstraat 45, 5421 KD Gemert</p>
+<p style="margin-top:8px"><a href="tel:0655566052">06 555 660 52</a></p>
+<p><a href="tel:0412640637">0412 640 637</a></p>
+<p><a href="mailto:info@euromeatoss.nl">info@euromeatoss.nl</a></p>
+</div>
+<div>
+<h3>Openingstijden</h3>
+<p>Ma - Vr: 09:00 - 18:00</p>
+<p>Za: 09:00 - 17:00</p>
+<p>Zo: Gesloten</p>
+<p style="margin-top:12px"><a href="https://facebook.com/foodloodsoss" target="_blank" rel="noopener">Facebook</a></p>
+</div>
+</div>
+<div class="footer-bottom">
+<p>&copy; 2025 Food Loods Oss — Gebouwd door <a href="https://code-lieshout.nl" target="_blank" rel="noopener" style="opacity:1;display:inline">Code Lieshout</a></p>
+</div>
+</div>
+</footer>
 
-  <!-- LIGHTBOX -->
-  <div id="lightbox" class="fixed inset-0 z-[60] bg-black/90 hidden items-center justify-center cursor-pointer" onclick="closeLightbox()">
-    <img id="lightboxImg" src="" alt="" class="max-w-[90vw] max-h-[90vh] rounded-lg shadow-2xl">
-    <button class="absolute top-6 right-6 text-white text-4xl font-light cursor-pointer hover:text-brand-400 transition-colors">&times;</button>
-  </div>
-
-  <script>
-    // Mobile menu
-    document.getElementById('menuBtn').addEventListener('click', () => {
-      document.getElementById('mobileMenu').classList.toggle('hidden');
-    });
-    // Lightbox
-    function openLightbox(el) {
-      const img = el.querySelector('img');
-      document.getElementById('lightboxImg').src = img.src;
-      document.getElementById('lightbox').classList.remove('hidden');
-      document.getElementById('lightbox').classList.add('flex');
-    }
-    function closeLightbox() {
-      document.getElementById('lightbox').classList.add('hidden');
-      document.getElementById('lightbox').classList.remove('flex');
-    }
-    document.addEventListener('keydown', e => { if (e.key === 'Escape') closeLightbox(); });
-  </script>
+<script>
+function openLightbox(img){const lb=document.getElementById('lightbox');document.getElementById('lightbox-img').src=img.src;lb.classList.add('open')}
+</script>
 </body>
 </html>
